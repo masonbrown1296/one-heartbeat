@@ -1,6 +1,8 @@
 import { useState, useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import { useScrollAnimation } from '../hooks/useScrollAnimation'
+import { Swords, Trophy, Brain, Heart } from 'lucide-react'
+import SEO from '../components/shared/SEO'
 import './Home.css'
 
 const stats = [
@@ -12,28 +14,28 @@ const stats = [
 
 const programs = [
   {
-    icon: '⚔️',
+    icon: <Swords size={28} />,
     title: 'Warrior Culture Sessions',
     desc: 'Team-wide mental performance and leadership training that builds championship culture, accountability, and cohesion from within.',
     link: '/warrior-culture',
     tag: 'Most Popular',
   },
   {
-    icon: '🏆',
+    icon: <Trophy size={28} />,
     title: 'Individual Camps',
     desc: 'Intensive athlete development combining classroom mindset training with elite on-court skill work for serious competitors.',
     link: '/individual-camps',
     tag: null,
   },
   {
-    icon: '🧠',
+    icon: <Brain size={28} />,
     title: 'Mindset Training',
     desc: 'Performance psychology and leadership consulting for individual athletes, teams, and organizations ready to compete at the next level.',
     link: '/mindset-training',
     tag: null,
   },
   {
-    icon: '❤️',
+    icon: <Heart size={28} />,
     title: 'Be Grundy Foundation',
     desc: 'Empowering underserved youth through sports, mentorship, and life skills — giving every kid a fighting chance.',
     link: '/be-grundy-foundation',
@@ -94,8 +96,8 @@ function TestimonialsSlider() {
         <div className="testimonial-quote-mark">&ldquo;</div>
         <blockquote className="testimonial-text">{t.quote}</blockquote>
         <div className="testimonial-author">
-          <div className="testimonial-avatar placeholder-img">
-            <span>{t.name.charAt(0)}</span>
+          <div className="testimonial-avatar" style={{ width: 48, height: 48, borderRadius: '50%', background: 'var(--orange-500)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#fff', fontWeight: 700, fontSize: '1.1rem' }}>
+            {t.name.charAt(0)}
           </div>
           <div>
             <p className="testimonial-name">{t.name}</p>
@@ -126,6 +128,11 @@ export default function Home() {
 
   return (
     <div className="home">
+      <SEO
+        title="Home"
+        description="One Heartbeat Warriors — Elite mental performance and leadership training for athletes, coaches, and organizations. Build mental toughness, confidence, and championship culture."
+        path="/"
+      />
       {/* ── HERO ── */}
       <section className="home-hero">
         <div className="home-hero-bg" />
@@ -179,9 +186,7 @@ export default function Home() {
             <Link to="/about" className="btn btn-outline-orange mt-4">Meet Coach Tommy</Link>
           </div>
           <div className="mission-image-block fade-in stagger-2">
-            <div className="mission-img placeholder-img">
-              <span>Coach Tommy Brown</span>
-            </div>
+            <img src="/priority-images/IMG_1952.jpg" alt="Coach Tommy Brown speaking to athletes" className="mission-img" style={{ borderRadius: '1rem', width: '100%', objectFit: 'cover' }} />
             <div className="mission-card">
               <span className="mission-card-number">1</span>
               <p className="mission-card-text">Heartbeat. One Team. One Goal.</p>
@@ -231,9 +236,7 @@ export default function Home() {
       <section className="section section-white" ref={aboutRef}>
         <div className="container about-preview-layout">
           <div className="about-preview-image fade-in">
-            <div className="about-img placeholder-img">
-              <span>Coach Tommy Brown</span>
-            </div>
+            <img src="/headshot.webp" alt="Coach Tommy Brown" className="about-img" style={{ borderRadius: '1rem', width: '100%', objectFit: 'cover' }} />
             <div className="about-credential-badge">
               <span className="about-badge-number">20+</span>
               <span className="about-badge-text">Years Coaching</span>
@@ -267,9 +270,16 @@ export default function Home() {
             <div className="orange-bar" />
           </div>
           <div className="media-grid fade-up stagger-2">
-            {[1,2,3,4,5,6].map(n => (
-              <div key={n} className="media-thumb placeholder-img">
-                <span>Photo {n}</span>
+            {[
+              '/priority-images/IMG_2080.jpg',
+              '/ohb-images/IMG_2617.jpg',
+              '/ohb-images/IMG_3013.jpg',
+              '/priority-images/IMG_3346.jpg',
+              '/ohb-images/IMG_2894.jpg',
+              '/ohb-images/IMG_1631.jpg',
+            ].map((src, n) => (
+              <div key={n} className="media-thumb" style={{ position: 'relative', overflow: 'hidden', borderRadius: '0.75rem' }}>
+                <img src={src} alt={`One Heartbeat Warriors photo ${n + 1}`} loading="lazy" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
                 <div className="media-thumb-overlay">
                   <span>View</span>
                 </div>

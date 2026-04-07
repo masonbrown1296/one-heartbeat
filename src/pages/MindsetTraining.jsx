@@ -1,37 +1,39 @@
 import { Link } from 'react-router-dom'
 import { useScrollAnimation } from '../hooks/useScrollAnimation'
+import { Target, Trophy, BarChart3, Mic, Dumbbell, Flame, Crosshair, Swords } from 'lucide-react'
 import PageHero from '../components/PageHero'
 import CTABanner from '../components/CTABanner'
+import SEO from '../components/shared/SEO'
 import './InnerPage.css'
 
 const services = [
   {
-    icon: '🎯',
+    icon: <Target size={28} />,
     title: 'Individual Athlete Coaching',
     desc: 'One-on-one performance coaching for athletes at all levels who want to build mental toughness, sharpen focus, and unlock their full competitive potential. Custom programs built around your specific goals.',
   },
   {
-    icon: '🏆',
+    icon: <Trophy size={28} />,
     title: 'Team Mindset Programs',
     desc: 'Season-long or intensive team programs designed to install a championship mindset from top to bottom — creating a culture where every athlete competes with purpose, confidence, and accountability.',
   },
   {
-    icon: '📊',
+    icon: <BarChart3 size={28} />,
     title: 'Leadership Consulting',
     desc: 'Strategic leadership development for coaches, athletic directors, and team captains. Build communication systems, culture frameworks, and performance standards that sustain excellence.',
   },
   {
-    icon: '🎤',
+    icon: <Mic size={28} />,
     title: 'Speaking Engagements',
     desc: "Coach Tommy's high-energy keynotes and motivational presentations are perfect for team banquets, athletic department events, school programs, and corporate leadership events.",
   },
 ]
 
 const outcomes = [
-  { icon: '💪', title: 'Unbreakable Confidence', desc: 'Process-based self-belief that holds up in the biggest moments — not fragile ego-based confidence.' },
-  { icon: '🔥', title: 'Elite Resilience', desc: 'The ability to get knocked down and get back up stronger, with more focus and more fire than before.' },
-  { icon: '🎯', title: 'Composure Under Pressure', desc: 'Breathing, focus, and routine systems that keep athletes locked in when the game is on the line.' },
-  { icon: '⚔️', title: 'Competitive Edge', desc: 'The mental habits, routines, and frameworks that separate elite competitors from the rest of the field.' },
+  { icon: <Dumbbell size={28} />, title: 'Unbreakable Confidence', desc: 'Process-based self-belief that holds up in the biggest moments — not fragile ego-based confidence.' },
+  { icon: <Flame size={28} />, title: 'Elite Resilience', desc: 'The ability to get knocked down and get back up stronger, with more focus and more fire than before.' },
+  { icon: <Crosshair size={28} />, title: 'Composure Under Pressure', desc: 'Breathing, focus, and routine systems that keep athletes locked in when the game is on the line.' },
+  { icon: <Swords size={28} />, title: 'Competitive Edge', desc: 'The mental habits, routines, and frameworks that separate elite competitors from the rest of the field.' },
 ]
 
 export default function MindsetTraining() {
@@ -41,6 +43,11 @@ export default function MindsetTraining() {
 
   return (
     <div>
+      <SEO
+        title="Mindset Training"
+        description="Proven performance psychology and leadership coaching for athletes, teams, and organizations ready to compete at the highest level."
+        path="/mindset-training"
+      />
       <PageHero
         label="Performance Psychology"
         title={<>Mindset <span className="text-orange">Training</span></>}
@@ -72,9 +79,7 @@ export default function MindsetTraining() {
             </div>
           </div>
           <div className="inner-image fade-in stagger-2">
-            <div className="placeholder-img inner-img">
-              <span>Mindset Training Photo</span>
-            </div>
+            <img src="/priority-images/IMG_3346.jpg" alt="Mindset training session" className="inner-img" loading="lazy" style={{ borderRadius: '1rem', width: '100%', objectFit: 'cover' }} />
           </div>
         </div>
       </section>

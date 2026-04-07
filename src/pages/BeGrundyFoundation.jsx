@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom'
 import { useScrollAnimation } from '../hooks/useScrollAnimation'
+import { HeartHandshake, Handshake, Megaphone, Shirt, Trophy, BookOpen, GraduationCap, Brain } from 'lucide-react'
 import PageHero from '../components/PageHero'
+import SEO from '../components/shared/SEO'
 import './InnerPage.css'
 import './BeGrundyFoundation.css'
 
@@ -18,10 +20,10 @@ const impactGoals = [
 ]
 
 const waysToSupport = [
-  { icon: '💛', title: 'Make a Donation', desc: 'Every dollar goes directly toward programming, scholarships, and resources for youth who need it most. No donation is too small.' },
-  { icon: '🤝', title: 'Become a Partner', desc: 'Align your organization with a mission that changes lives. Corporate partnerships, sponsorships, and cause-marketing opportunities available.' },
-  { icon: '📣', title: 'Spread the Word', desc: 'Share our mission with your network. Follow us on social media and help us reach more young people who need the Warrior mindset.' },
-  { icon: '🎽', title: 'Volunteer', desc: 'Join our team of dedicated volunteers and bring your skills, passion, and time to directly impact youth in your community.' },
+  { icon: <HeartHandshake size={28} />, title: 'Make a Donation', desc: 'Every dollar goes directly toward programming, scholarships, and resources for youth who need it most. No donation is too small.' },
+  { icon: <Handshake size={28} />, title: 'Become a Partner', desc: 'Align your organization with a mission that changes lives. Corporate partnerships, sponsorships, and cause-marketing opportunities available.' },
+  { icon: <Megaphone size={28} />, title: 'Spread the Word', desc: 'Share our mission with your network. Follow us on social media and help us reach more young people who need the Warrior mindset.' },
+  { icon: <Shirt size={28} />, title: 'Volunteer', desc: 'Join our team of dedicated volunteers and bring your skills, passion, and time to directly impact youth in your community.' },
 ]
 
 export default function BeGrundyFoundation() {
@@ -32,6 +34,11 @@ export default function BeGrundyFoundation() {
 
   return (
     <div>
+      <SEO
+        title="Be Grundy Foundation"
+        description="Empowering underserved youth through sports, mentorship, and life skills — giving every young person the tools and belief to write their own story."
+        path="/be-grundy-foundation"
+      />
       <PageHero
         label="Community Impact"
         title={<>Be Grundy <span className="text-orange">Foundation</span></>}
@@ -46,9 +53,7 @@ export default function BeGrundyFoundation() {
         <div className="container">
           <div className="grundy-story fade-up">
             <div className="grundy-story-image">
-              <div className="placeholder-img grundy-img">
-                <span>Foundation Photo</span>
-              </div>
+              <img src="/ohb-images/IMG_2306.jpg" alt="Be Grundy Foundation youth event" className="grundy-img" loading="lazy" style={{ borderRadius: '1rem', width: '100%', objectFit: 'cover' }} />
             </div>
             <div className="grundy-story-text">
               <span className="section-label">Our Story</span>
@@ -100,10 +105,10 @@ export default function BeGrundyFoundation() {
           </div>
           <div className="programs-impact-list fade-up mt-6">
             {[
-              { icon: '⚽', title: 'Sports-Based Mentorship', desc: 'Using basketball and other sports as a vehicle for teaching discipline, leadership, and life skills to youth ages 8–18.' },
-              { icon: '📚', title: 'Academic Support', desc: "Tutoring, homework help, and college preparation programs that put every student on a path to academic success." },
-              { icon: '🎓', title: 'Scholarship Program', desc: 'Annual scholarships for graduating seniors who demonstrate leadership, character, and a commitment to community.' },
-              { icon: '🧠', title: 'Life Skills Workshops', desc: 'Financial literacy, communication, goal-setting, and real-world readiness workshops for teens and young adults.' },
+              { icon: <Trophy size={24} />, title: 'Sports-Based Mentorship', desc: 'Using basketball and other sports as a vehicle for teaching discipline, leadership, and life skills to youth ages 8–18.' },
+              { icon: <BookOpen size={24} />, title: 'Academic Support', desc: "Tutoring, homework help, and college preparation programs that put every student on a path to academic success." },
+              { icon: <GraduationCap size={24} />, title: 'Scholarship Program', desc: 'Annual scholarships for graduating seniors who demonstrate leadership, character, and a commitment to community.' },
+              { icon: <Brain size={24} />, title: 'Life Skills Workshops', desc: 'Financial literacy, communication, goal-setting, and real-world readiness workshops for teens and young adults.' },
             ].map((p, i) => (
               <div key={p.title} className="impact-program-item">
                 <span className="impact-program-icon">{p.icon}</span>
@@ -128,8 +133,8 @@ export default function BeGrundyFoundation() {
           <div className="team-grid">
             {teamMembers.map((m, i) => (
               <div key={m.name} className={`team-card fade-up stagger-${i + 1}`}>
-                <div className="team-avatar placeholder-img">
-                  <span>{m.name.charAt(0)}</span>
+                <div className="team-avatar" style={{ width: 80, height: 80, borderRadius: '50%', background: 'var(--orange-500, #f97316)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#fff', fontWeight: 700, fontSize: '1.5rem', margin: '0 auto' }}>
+                  {m.name.charAt(0)}
                 </div>
                 <h3 className="team-name">{m.name}</h3>
                 <p className="team-role">{m.role}</p>

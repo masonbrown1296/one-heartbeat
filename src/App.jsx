@@ -11,11 +11,21 @@ import BeGrundyFoundation from './pages/BeGrundyFoundation'
 import AboutTommy from './pages/AboutTommy'
 import Media from './pages/Media'
 import Blog from './pages/Blog'
+import BlogPost from './pages/BlogPost'
 import Contact from './pages/Contact'
 
 function ScrollToTop() {
   const { pathname } = useLocation()
-  useEffect(() => { window.scrollTo(0, 0) }, [pathname])
+  useEffect(() => {
+    window.scrollTo(0, 0)
+    if (typeof window.dataLayer !== 'undefined') {
+      window.dataLayer.push({
+        event: 'virtualPageview',
+        pagePath: pathname,
+        pageTitle: document.title,
+      })
+    }
+  }, [pathname])
   return null
 }
 
@@ -34,6 +44,7 @@ function AppLayout() {
           <Route path="/about" element={<AboutTommy />} />
           <Route path="/media" element={<Media />} />
           <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/:slug" element={<BlogPost />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </main>

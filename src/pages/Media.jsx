@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import { useScrollAnimation } from '../hooks/useScrollAnimation'
 import PageHero from '../components/PageHero'
 import CTABanner from '../components/CTABanner'
+import SEO from '../components/shared/SEO'
 import './InnerPage.css'
 import './Media.css'
 
@@ -28,6 +29,11 @@ export default function Media() {
 
   return (
     <div>
+      <SEO
+        title="Media"
+        description="Podcast episodes, videos, interviews, and behind-the-scenes footage from the One Heartbeat Warriors movement."
+        path="/media"
+      />
       <PageHero
         label="Media & Content"
         title={<>One Heartbeat <span className="text-orange">Media</span></>}
@@ -46,8 +52,8 @@ export default function Media() {
             </p>
           </div>
           <div className="podcast-player-featured fade-up stagger-1">
-            <div className="podcast-featured-thumb placeholder-img">
-              <span>Podcast Cover Art</span>
+            <div className="podcast-featured-thumb" style={{ background: 'linear-gradient(135deg, var(--navy-900) 0%, var(--orange-500) 100%)', display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: '0.75rem', color: '#fff', fontWeight: 800, fontSize: '1.2rem', textAlign: 'center', padding: '1.5rem' }}>
+              One Heartbeat Warriors Podcast
             </div>
             <div className="podcast-featured-info">
               <span className="section-label">Latest Episode</span>
@@ -69,8 +75,8 @@ export default function Media() {
           <div className="podcast-grid">
             {episodes.map((e, i) => (
               <div key={e.ep} className={`podcast-card fade-up stagger-${(i % 2) + 1}`}>
-                <div className="podcast-thumb placeholder-img">
-                  <span>#</span>
+                <div className="podcast-thumb" style={{ background: 'var(--navy-800)', display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: '0.5rem', color: 'var(--orange-500)', fontWeight: 700, fontSize: '0.9rem', minWidth: 60 }}>
+                  {e.ep.replace('EP. ', '#')}
                 </div>
                 <div>
                   <div className="podcast-ep">{e.ep}</div>
@@ -94,7 +100,7 @@ export default function Media() {
           <div className="video-grid fade-up stagger-2">
             {videos.map(v => (
               <div key={v.title} className="video-card">
-                <div className="video-thumb placeholder-img">
+                <div className="video-thumb" style={{ background: 'linear-gradient(135deg, var(--navy-900) 0%, var(--gray-800) 100%)', position: 'relative' }}>
                   <button className="play-btn" aria-label={`Play ${v.title}`}>
                     <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
                   </button>
@@ -120,9 +126,19 @@ export default function Media() {
             <div className="orange-bar" />
           </div>
           <div className="gallery-grid fade-up stagger-2">
-            {[...Array(9)].map((_, i) => (
-              <div key={i} className={`gallery-item placeholder-img ${i === 0 ? 'gallery-featured' : ''}`}>
-                <span>Photo {i + 1}</span>
+            {[
+              '/priority-images/IMG_1952.jpg',
+              '/ohb-images/IMG_2617.jpg',
+              '/ohb-images/IMG_3013.jpg',
+              '/ohb-images/IMG_2894.jpg',
+              '/ohb-images/IMG_1631.jpg',
+              '/ohb-images/IMG_2581.jpg',
+              '/ohb-images/IMG_2930.jpg',
+              '/ohb-images/IMG_3084.jpg',
+              '/ohb-images/IMG_2740.jpg',
+            ].map((src, i) => (
+              <div key={i} className={`gallery-item ${i === 0 ? 'gallery-featured' : ''}`} style={{ overflow: 'hidden', borderRadius: '0.75rem' }}>
+                <img src={src} alt={`One Heartbeat Warriors gallery photo ${i + 1}`} loading="lazy" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
                 <div className="gallery-overlay">
                   <span>View</span>
                 </div>

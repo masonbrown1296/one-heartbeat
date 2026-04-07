@@ -1,17 +1,19 @@
 import { Link } from 'react-router-dom'
 import { useScrollAnimation } from '../hooks/useScrollAnimation'
+import { Trophy, Mic, Radio, Heart, Users, Medal } from 'lucide-react'
 import PageHero from '../components/PageHero'
 import CTABanner from '../components/CTABanner'
+import SEO from '../components/shared/SEO'
 import './InnerPage.css'
 import './AboutTommy.css'
 
 const highlights = [
-  { icon: '🏆', label: 'Division I Coaching Experience' },
-  { icon: '🎤', label: 'National Keynote Speaker' },
-  { icon: '📻', label: 'Podcast Host' },
-  { icon: '❤️', label: 'Foundation Founder' },
-  { icon: '👥', label: '500+ Athletes Developed' },
-  { icon: '🏅', label: 'Multiple Coach of the Year Awards' },
+  { icon: <Trophy size={20} />, label: 'Division I Coaching Experience' },
+  { icon: <Mic size={20} />, label: 'National Keynote Speaker' },
+  { icon: <Radio size={20} />, label: 'Podcast Host' },
+  { icon: <Heart size={20} />, label: 'Foundation Founder' },
+  { icon: <Users size={20} />, label: '500+ Athletes Developed' },
+  { icon: <Medal size={20} />, label: 'Multiple Coach of the Year Awards' },
 ]
 
 const career = [
@@ -41,6 +43,12 @@ export default function AboutTommy() {
 
   return (
     <div>
+      <SEO
+        title="About Coach Tommy Brown"
+        description="Two decades of elite coaching, mentorship, and leadership development — Coach Tommy Brown creates warriors one athlete at a time."
+        path="/about"
+        image="https://one-heartbeat.vercel.app/headshot.webp"
+      />
       <PageHero
         label="About Coach Tommy Brown"
         title={<>Built by the Game. <span className="text-orange">Proven by Results.</span></>}
@@ -51,9 +59,7 @@ export default function AboutTommy() {
       <section className="section section-white" ref={bioRef}>
         <div className="container inner-two-col">
           <div className="about-bio-image fade-in">
-            <div className="placeholder-img about-bio-img">
-              <span>Coach Tommy Brown</span>
-            </div>
+            <img src="/headshot.webp" alt="Coach Tommy Brown" className="about-bio-img" style={{ borderRadius: '1rem', width: '100%', objectFit: 'cover' }} />
             <div className="about-highlights-grid">
               {highlights.map((h, i) => (
                 <div key={h.label} className="about-highlight">
@@ -105,9 +111,7 @@ export default function AboutTommy() {
               ))}
             </div>
             <div className="inner-image fade-in stagger-2">
-              <div className="placeholder-img inner-img">
-                <span>Career Photo</span>
-              </div>
+              <img src="/priority-images/IMG_8808.jpg" alt="Coach Tommy Brown coaching athletes" className="inner-img" style={{ borderRadius: '1rem', width: '100%', objectFit: 'cover' }} />
             </div>
           </div>
         </div>

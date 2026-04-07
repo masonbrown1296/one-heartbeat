@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import { useScrollAnimation } from '../hooks/useScrollAnimation'
+import { Mail, Phone, MapPin, Clock } from 'lucide-react'
 import PageHero from '../components/PageHero'
+import SEO from '../components/shared/SEO'
 import './InnerPage.css'
 import './Contact.css'
 
@@ -33,6 +35,11 @@ export default function Contact() {
 
   return (
     <div>
+      <SEO
+        title="Contact"
+        description="Ready to bring Warrior Culture to your program? Contact Coach Tommy Brown to book a session, schedule a keynote, or learn more."
+        path="/contact"
+      />
       <PageHero
         label="Get In Touch"
         title={<>Let's Build Something <span className="text-orange">Great</span></>}
@@ -48,7 +55,7 @@ export default function Contact() {
 
             {submitted ? (
               <div className="success-message mt-4">
-                <h3>Message Received! 🎯</h3>
+                <h3>Message Received!</h3>
                 <p>Thank you for reaching out. Coach Tommy will be in touch within 24–48 hours. One heartbeat. One team.</p>
               </div>
             ) : (
@@ -152,7 +159,7 @@ export default function Contact() {
               <h3 className="contact-info-title">Contact Information</h3>
               <div className="contact-info-items">
                 <div className="contact-info-item">
-                  <div className="contact-info-icon">📧</div>
+                  <div className="contact-info-icon"><Mail size={22} /></div>
                   <div>
                     <div className="contact-info-label">Email</div>
                     <div className="contact-info-value">
@@ -161,7 +168,7 @@ export default function Contact() {
                   </div>
                 </div>
                 <div className="contact-info-item">
-                  <div className="contact-info-icon">📞</div>
+                  <div className="contact-info-icon"><Phone size={22} /></div>
                   <div>
                     <div className="contact-info-label">Phone</div>
                     <div className="contact-info-value">
@@ -170,14 +177,14 @@ export default function Contact() {
                   </div>
                 </div>
                 <div className="contact-info-item">
-                  <div className="contact-info-icon">📍</div>
+                  <div className="contact-info-icon"><MapPin size={22} /></div>
                   <div>
                     <div className="contact-info-label">Location</div>
                     <div className="contact-info-value">Serving programs nationwide</div>
                   </div>
                 </div>
                 <div className="contact-info-item">
-                  <div className="contact-info-icon">🕐</div>
+                  <div className="contact-info-icon"><Clock size={22} /></div>
                   <div>
                     <div className="contact-info-label">Response Time</div>
                     <div className="contact-info-value">Within 24–48 business hours</div>

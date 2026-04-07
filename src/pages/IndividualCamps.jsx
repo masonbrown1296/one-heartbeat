@@ -1,23 +1,25 @@
 import { Link } from 'react-router-dom'
 import { useScrollAnimation } from '../hooks/useScrollAnimation'
+import { Brain, Dumbbell, Crown, MessageCircle, Target, Zap, Crosshair, CircleDot, Flame } from 'lucide-react'
 import PageHero from '../components/PageHero'
 import CTABanner from '../components/CTABanner'
+import SEO from '../components/shared/SEO'
 import './InnerPage.css'
 import './IndividualCamps.css'
 
 const classroomTopics = [
-  { icon: '🧠', title: 'Mental Toughness', desc: 'Training the mindset to compete through adversity, failure, and pressure without breaking down.' },
-  { icon: '💪', title: 'Confidence Building', desc: 'Developing genuine, process-based confidence that holds up in the most competitive moments.' },
-  { icon: '👑', title: 'Leadership Skills', desc: 'Learning how to lead teammates, command respect, and elevate the people around you.' },
-  { icon: '🗣️', title: 'Communication', desc: 'On-court communication, body language, and the verbal skills that make great teammates.' },
-  { icon: '🎯', title: 'Mindset Habits', desc: 'Daily routines, pre-game preparation, and habits that the best athletes use to stay locked in.' },
+  { icon: <Brain size={28} />, title: 'Mental Toughness', desc: 'Training the mindset to compete through adversity, failure, and pressure without breaking down.' },
+  { icon: <Dumbbell size={28} />, title: 'Confidence Building', desc: 'Developing genuine, process-based confidence that holds up in the most competitive moments.' },
+  { icon: <Crown size={28} />, title: 'Leadership Skills', desc: 'Learning how to lead teammates, command respect, and elevate the people around you.' },
+  { icon: <MessageCircle size={28} />, title: 'Communication', desc: 'On-court communication, body language, and the verbal skills that make great teammates.' },
+  { icon: <Target size={28} />, title: 'Mindset Habits', desc: 'Daily routines, pre-game preparation, and habits that the best athletes use to stay locked in.' },
 ]
 
 const onCourtTopics = [
-  { icon: '⚡', title: 'Skill Development', desc: 'Position-specific drills and fundamental skill building led by elite coaches.' },
-  { icon: '💥', title: 'Explosiveness & Athleticism', desc: 'Speed, quickness, first-step explosiveness, and functional athleticism training.' },
-  { icon: '🏀', title: 'Game Decision Making', desc: 'Reading the game, making quick decisions, and developing IQ that sets you apart.' },
-  { icon: '🔥', title: 'Competitive Training', desc: 'Live game situations, controlled scrimmaging, and high-intensity competitive drills.' },
+  { icon: <Zap size={28} />, title: 'Skill Development', desc: 'Position-specific drills and fundamental skill building led by elite coaches.' },
+  { icon: <Crosshair size={28} />, title: 'Explosiveness & Athleticism', desc: 'Speed, quickness, first-step explosiveness, and functional athleticism training.' },
+  { icon: <CircleDot size={28} />, title: 'Game Decision Making', desc: 'Reading the game, making quick decisions, and developing IQ that sets you apart.' },
+  { icon: <Flame size={28} />, title: 'Competitive Training', desc: 'Live game situations, controlled scrimmaging, and high-intensity competitive drills.' },
 ]
 
 export default function IndividualCamps() {
@@ -27,6 +29,11 @@ export default function IndividualCamps() {
 
   return (
     <div>
+      <SEO
+        title="Individual Camps"
+        description="Complete athlete development combining elite mindset training in the classroom with high-intensity on-court skill work for serious competitors."
+        path="/individual-camps"
+      />
       <PageHero
         label="Athlete Development"
         title={<>Individual <span className="text-orange">Camps</span></>}
@@ -66,9 +73,7 @@ export default function IndividualCamps() {
             </div>
           </div>
           <div className="inner-image fade-in stagger-2">
-            <div className="placeholder-img inner-img">
-              <span>Camp Training Photo</span>
-            </div>
+            <img src="/priority-images/IMG_9965.jpg" alt="Individual camp training" className="inner-img" loading="lazy" style={{ borderRadius: '1rem', width: '100%', objectFit: 'cover' }} />
           </div>
         </div>
       </section>

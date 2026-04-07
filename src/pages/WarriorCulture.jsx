@@ -1,38 +1,40 @@
 import { Link } from 'react-router-dom'
 import { useScrollAnimation } from '../hooks/useScrollAnimation'
+import { Brain, Trophy, Dumbbell, Flame, Handshake, MessageCircle, Users, Building2, ClipboardList, Mic } from 'lucide-react'
 import PageHero from '../components/PageHero'
 import CTABanner from '../components/CTABanner'
+import SEO from '../components/shared/SEO'
 import './InnerPage.css'
 
 const pillars = [
-  { icon: '🧠', title: 'Mental Toughness', desc: 'Developing the resilience, grit, and composure to perform under the highest levels of pressure — when the game is on the line.' },
-  { icon: '🏆', title: 'Leadership Development', desc: 'Cultivating the communication, accountability, and influence skills that separate good teams from great ones.' },
-  { icon: '💪', title: 'Confidence Building', desc: 'Instilling unshakeable belief and self-trust so athletes and teams compete with authority — in practice and in competition.' },
-  { icon: '🔥', title: 'Performance Under Pressure', desc: 'Training athletes to elevate when the stakes are highest, building process-driven focus and composure in critical moments.' },
-  { icon: '🤝', title: 'Accountability Culture', desc: 'Building a team-wide standard where every individual holds themselves and each other to the highest expectations — every day.' },
-  { icon: '🗣️', title: 'Communication & Connection', desc: 'Forging authentic relationships, deep trust, and elite communication patterns that make teams truly unbreakable.' },
+  { icon: <Brain size={28} />, title: 'Mental Toughness', desc: 'Developing the resilience, grit, and composure to perform under the highest levels of pressure — when the game is on the line.' },
+  { icon: <Trophy size={28} />, title: 'Leadership Development', desc: 'Cultivating the communication, accountability, and influence skills that separate good teams from great ones.' },
+  { icon: <Dumbbell size={28} />, title: 'Confidence Building', desc: 'Instilling unshakeable belief and self-trust so athletes and teams compete with authority — in practice and in competition.' },
+  { icon: <Flame size={28} />, title: 'Performance Under Pressure', desc: 'Training athletes to elevate when the stakes are highest, building process-driven focus and composure in critical moments.' },
+  { icon: <Handshake size={28} />, title: 'Accountability Culture', desc: 'Building a team-wide standard where every individual holds themselves and each other to the highest expectations — every day.' },
+  { icon: <MessageCircle size={28} />, title: 'Communication & Connection', desc: 'Forging authentic relationships, deep trust, and elite communication patterns that make teams truly unbreakable.' },
 ]
 
 const formats = [
   {
     title: 'Team Sessions',
     desc: 'Full-team workshops and training sessions designed to install Warrior Culture from the ground up. Available as single sessions, multi-day intensives, or season-long partnerships.',
-    icon: '👥',
+    icon: <Users size={28} />,
   },
   {
     title: 'Athletic Department Programs',
     desc: "Comprehensive department-wide programs that align coaches, athletes, and support staff around a single championship culture standard.",
-    icon: '🏛️',
+    icon: <Building2 size={28} />,
   },
   {
     title: 'Coach Workshops',
     desc: 'Specialized leadership training for coaching staffs — building communication frameworks, culture-setting strategies, and performance management skills.',
-    icon: '📋',
+    icon: <ClipboardList size={28} />,
   },
   {
     title: 'Leadership Seminars',
     desc: 'High-impact half-day and full-day seminars for captains, team leaders, and student-athletes stepping into leadership roles.',
-    icon: '🎤',
+    icon: <Mic size={28} />,
   },
 ]
 
@@ -54,6 +56,11 @@ export default function WarriorCulture() {
 
   return (
     <div>
+      <SEO
+        title="Warrior Culture Sessions"
+        description="Transform your team's culture, mindset, and performance with proven mental toughness and leadership training built for elite athletes."
+        path="/warrior-culture"
+      />
       <PageHero
         label="Team Training"
         title={<>Warrior Culture <span className="text-orange">Sessions</span></>}
@@ -79,9 +86,7 @@ export default function WarriorCulture() {
             <Link to="/contact" className="btn btn-primary mt-4">Book a Warrior Culture Session</Link>
           </div>
           <div className="inner-image fade-in stagger-2">
-            <div className="placeholder-img inner-img">
-              <span>Warrior Culture Session</span>
-            </div>
+            <img src="/priority-images/IMG_2080.jpg" alt="Warrior Culture training session" className="inner-img" loading="lazy" style={{ borderRadius: '1rem', width: '100%', objectFit: 'cover' }} />
           </div>
         </div>
       </section>
@@ -152,9 +157,7 @@ export default function WarriorCulture() {
             </ul>
           </div>
           <div className="inner-image fade-in stagger-2">
-            <div className="placeholder-img inner-img">
-              <span>Team Training Photo</span>
-            </div>
+            <img src="/ohb-images/IMG_2618.jpg" alt="Team training with One Heartbeat Warriors" className="inner-img" loading="lazy" style={{ borderRadius: '1rem', width: '100%', objectFit: 'cover' }} />
           </div>
         </div>
       </section>
