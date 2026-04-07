@@ -1,0 +1,139 @@
+.grundy-story {
+  display: grid;
+  gap: 3rem;
+  align-items: center;
+}
+
+@media (min-width: 900px) {
+  .grundy-story { grid-template-columns: 1fr 1.4fr; gap: 5rem; }
+}
+
+.grundy-img {
+  width: 100%;
+  aspect-ratio: 4/5;
+  border-radius: var(--radius-xl);
+}
+
+.mission-statement-block {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.mission-statement-block .orange-bar { margin: 1rem auto 1.5rem; }
+
+.programs-impact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.impact-program-item {
+  display: flex;
+  gap: 1.25rem;
+  align-items: flex-start;
+  padding: 1.5rem;
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--gray-200);
+  transition: var(--transition);
+}
+
+.impact-program-item:hover {
+  border-color: var(--orange-300);
+  box-shadow: var(--shadow-md);
+}
+
+.impact-program-icon {
+  font-size: 1.75rem;
+  flex-shrink: 0;
+  margin-top: 0.125rem;
+}
+
+.impact-program-title {
+  font-family: var(--font-display);
+  font-size: 1.125rem;
+  font-weight: 800;
+  color: var(--navy-800);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 0.375rem;
+}
+
+.impact-program-desc {
+  font-size: 0.9rem;
+  color: var(--gray-600);
+  line-height: 1.65;
+}
+
+.support-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 640px) { .support-grid { grid-template-columns: repeat(2, 1fr); } }
+
+.support-card {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  transition: var(--transition);
+}
+
+.support-card:hover {
+  background: rgba(255,255,255,0.08);
+  border-color: var(--orange-500);
+  transform: translateY(-3px);
+}
+
+.support-icon {
+  font-size: 2.25rem;
+  margin-bottom: 1rem;
+}
+
+.support-title {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--white);
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  margin-bottom: 0.5rem;
+}
+
+.support-desc {
+  font-size: 0.9375rem;
+  color: rgba(255,255,255,0.65);
+  line-height: 1.7;
+}
+
+/* Reuse from Home */
+.final-cta-title {
+  font-size: clamp(2.25rem, 5vw, 3.75rem);
+  color: var(--white);
+  text-transform: uppercase;
+  font-weight: 900;
+  line-height: 1.05;
+  margin-top: 0.75rem;
+}
+
+.final-cta-subtitle {
+  font-size: 1.0625rem;
+  color: rgba(255,255,255,0.8);
+  line-height: 1.75;
+  margin: 1.25rem auto 0;
+  max-width: 520px;
+}
+
+.final-cta-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 2.5rem;
+}

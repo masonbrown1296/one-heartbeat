@@ -1,0 +1,132 @@
+.about-bio-image {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.about-bio-img {
+  width: 100%;
+  aspect-ratio: 4/5;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+}
+
+.about-highlights-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+}
+
+.about-highlight {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--gray-700);
+  background: var(--gray-50);
+  border-radius: var(--radius-md);
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--gray-200);
+}
+
+.about-highlight span:first-child { font-size: 1rem; }
+
+.coaching-philosophy { max-width: 900px; margin: 0 auto; }
+
+.philosophy-blocks {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 640px) { .philosophy-blocks { grid-template-columns: repeat(2, 1fr); } }
+
+.philosophy-block {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  transition: var(--transition);
+  border-top: 3px solid var(--orange-500);
+}
+
+.philosophy-block:hover {
+  background: rgba(255,255,255,0.08);
+  transform: translateY(-3px);
+}
+
+.philosophy-block-title {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--white);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 0.75rem;
+}
+
+.philosophy-block-body {
+  font-size: 0.9375rem;
+  color: rgba(255,255,255,0.7);
+  line-height: 1.75;
+}
+
+.speaking-layout {
+  display: grid;
+  gap: 3rem;
+  margin-top: 3rem;
+}
+
+@media (min-width: 900px) {
+  .speaking-layout { grid-template-columns: 1fr 1.2fr; gap: 4rem; }
+}
+
+.speaking-topics-title,
+.speaking-formats-title {
+  font-family: var(--font-display);
+  font-size: 1.375rem;
+  font-weight: 800;
+  color: var(--navy-800);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 1.25rem;
+}
+
+.speaking-topics-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+}
+
+.speaking-topic-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.9375rem;
+  color: var(--gray-700);
+  font-weight: 500;
+}
+
+.speaking-format-item {
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--gray-200);
+}
+
+.speaking-format-item:last-of-type { border-bottom: none; }
+
+.speaking-format-item h4 {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--navy-800);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 0.25rem;
+}
+
+.speaking-format-item p {
+  font-size: 0.875rem;
+  color: var(--gray-600);
+  line-height: 1.6;
+}

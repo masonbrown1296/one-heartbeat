@@ -1,0 +1,30 @@
+.camp-highlights {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background: var(--gray-50);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  border-left: 4px solid var(--orange-500);
+}
+
+.camp-highlight-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.125rem;
+}
+
+.camp-h-value {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--orange-500);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.camp-h-label {
+  font-size: 0.875rem;
+  color: var(--gray-600);
+  font-weight: 500;
+}

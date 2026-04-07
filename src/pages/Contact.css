@@ -1,0 +1,45 @@
+.contact-form-heading {
+  font-family: var(--font-display);
+  font-size: 1.75rem;
+  font-weight: 900;
+  color: var(--navy-800);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.contact-form-sub {
+  font-size: 0.9375rem;
+  color: var(--gray-600);
+  line-height: 1.65;
+  margin-top: 0.5rem;
+}
+
+.contact-divider {
+  height: 1px;
+  background: rgba(255,255,255,0.1);
+  margin: 1.75rem 0;
+}
+
+.contact-services-heading {
+  font-family: var(--font-display);
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--orange-400);
+  margin-bottom: 0.875rem;
+}
+
+.contact-services-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.contact-service-item {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  font-size: 0.875rem;
+  color: rgba(255,255,255,0.7);
+}
