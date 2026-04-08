@@ -37,7 +37,7 @@ export default function IndividualCamps() {
       <PageHero
         label="Athlete Development"
         title={<>Individual <span className="text-orange">Camps</span></>}
-        subtitle="Complete athlete development combining elite mindset training in the classroom with high-intensity on-court skill work. Built for serious competitors ready to reach the next level."
+        subtitle="Classroom mindset training combined with on-court skill work. Built for athletes who are serious about getting better mentally and physically."
         cta="Register Interest"
         ctaLink="/contact"
         secondaryCta="Learn More"
@@ -52,10 +52,10 @@ export default function IndividualCamps() {
             <h2 className="section-title">Total Athlete Development. Zero Shortcuts.</h2>
             <div className="orange-bar" />
             <p className="inner-body">
-              One Heartbeat Warriors Individual Camps are unlike any other camp experience. We combine classroom-based mental performance training with elite on-court skill development to produce complete, confident, competition-ready athletes.
+              Most camps work on your game. This one works on your game and your mind. We combine classroom-based mindset training with on-court skill development so athletes leave more confident, more composed, and better prepared to compete.
             </p>
             <p className="inner-body mt-3">
-              Every aspect of our camp is intentional. From the moment athletes arrive, they are immersed in Warrior Culture — a standard of excellence, accountability, and relentless effort that defines how champions are built.
+              From the moment athletes arrive, they are held to the Warrior Culture standard: effort, accountability, body language, and mental toughness. Every rep matters. Every interaction matters.
             </p>
             <div className="camp-highlights mt-4">
               <div className="camp-highlight-item">
@@ -86,7 +86,7 @@ export default function IndividualCamps() {
             <h2 className="section-title">The Mind Leads. The Body Follows.</h2>
             <div className="orange-bar" />
             <p className="section-subtitle">
-              Championship performance starts in the mind. Our classroom sessions deliver the mental frameworks, tools, and habits that elite athletes live by.
+              Before athletes touch a ball, they learn how to think. Mistake response, confidence, body language, self-talk. The mental side of performance that most camps skip.
             </p>
           </div>
           <div className="pillars-grid">
@@ -111,7 +111,7 @@ export default function IndividualCamps() {
             <h2 className="section-title section-title-light">Compete Harder. Train Smarter.</h2>
             <div className="orange-bar" />
             <p className="section-subtitle section-subtitle-light">
-              Our on-court sessions are led by elite coaches and built around the specific skills, athleticism, and competitive habits that get athletes noticed at the next level.
+              Skill work, athleticism, and competitive training led by coaches who have been in the game at the highest levels. Everything is designed to translate directly to game performance.
             </p>
           </div>
           <div className="formats-grid">

@@ -8,21 +8,21 @@ import './InnerPage.css'
 import './AboutTommy.css'
 
 const highlights = [
-  { icon: <Trophy size={20} />, label: 'Division I Coaching Experience' },
-  { icon: <Mic size={20} />, label: 'National Keynote Speaker' },
+  { icon: <Trophy size={20} />, label: 'Former D1 Head Coach & Athletic Director' },
+  { icon: <Users size={20} />, label: '1,000+ Teams Trained in 43 States' },
+  { icon: <Mic size={20} />, label: 'Speaker & Author' },
   { icon: <Radio size={20} />, label: 'Podcast Host' },
-  { icon: <Heart size={20} />, label: 'Foundation Founder' },
-  { icon: <Users size={20} />, label: '500+ Athletes Developed' },
-  { icon: <Medal size={20} />, label: 'Multiple Coach of the Year Awards' },
+  { icon: <Heart size={20} />, label: 'Co-Founder, Be Grundy Foundation' },
+  { icon: <Medal size={20} />, label: 'Big Ten & Big South Experience' },
 ]
 
 const career = [
-  { year: '2003–2008', title: 'College Playing Career', desc: 'Four-year college athlete competing at a high level, developing the competitive drive and work ethic that would define his coaching philosophy.' },
-  { year: '2008–2012', title: 'Assistant Coach, High School', desc: "Tommy's coaching career began at the high school level, where he immediately showed an ability to connect with young athletes and drive program culture." },
-  { year: '2012–2016', title: 'Division I Assistant Coach', desc: 'Advanced to Division I athletics, working with elite college athletes and developing the mental performance frameworks that would become Warrior Culture.' },
-  { year: '2016–2019', title: 'Head Coach & Program Builder', desc: 'Led multiple programs to postseason success while establishing a reputation as one of the most effective culture-builders in collegiate athletics.' },
-  { year: '2019', title: 'Founded One Heartbeat Warriors', desc: 'Launched One Heartbeat Warriors to bring mental performance and leadership training to teams, programs, and organizations nationwide.' },
-  { year: '2021', title: 'Founded Be Grundy Foundation', desc: 'Created the Be Grundy Foundation to empower underserved youth through sports, mentorship, and life skills — honoring a mentor who changed his life.' },
+  { year: '2003-2008', title: 'College Playing Career', desc: 'Four-year college athlete. Developed the competitive drive and work ethic that would define his coaching career.' },
+  { year: '2008-2012', title: 'High School Coach & AD', desc: 'Began coaching at the high school level and served as Athletic Director. Showed an immediate ability to connect with young athletes and build program culture.' },
+  { year: '2012-2016', title: 'Division I Assistant Coach', desc: 'Moved to Division I athletics in the Big South conference, working with college athletes and developing the mental performance frameworks behind Warrior Culture.' },
+  { year: '2016-2019', title: 'Head Coach & Program Builder', desc: 'Led programs to postseason success. Built a reputation as one of the most effective culture-builders in collegiate athletics.' },
+  { year: '2019', title: 'Founded One Heartbeat Warriors', desc: 'Launched One Heartbeat to bring Warrior Culture sessions to teams, programs, and organizations nationwide. Now over 1,000 teams in 43 states.' },
+  { year: '2021', title: 'Co-Founded Be Grundy Foundation', desc: 'Created the Be Grundy Foundation with his wife Andrea Campbell-Brown to serve underserved youth through sports, mentorship, and life skills.' },
 ]
 
 const speakingTopics = [
@@ -30,10 +30,10 @@ const speakingTopics = [
   'Mental Toughness and Resilience',
   'Leadership Under Pressure',
   'The Warrior Mindset',
-  'From Adversity to Excellence',
+  'Coaching the Anxious Generation',
   'Team Chemistry and Communication',
-  'The Mind-Performance Connection',
-  'Building Programs That Last',
+  'Grit and Empathy in Leadership',
+  'Overcoming Adversity',
 ]
 
 export default function AboutTommy() {
@@ -45,14 +45,14 @@ export default function AboutTommy() {
     <div>
       <SEO
         title="About Coach Tommy Brown"
-        description="Two decades of elite coaching, mentorship, and leadership development — Coach Tommy Brown creates warriors one athlete at a time."
+        description="Former D1 head coach and athletic director. 20 years in coaching. 1,000+ teams trained in 43 states. Tommy Brown helps people win the war in their minds."
         path="/about"
         image="https://one-heartbeat.vercel.app/headshot.webp"
       />
       <PageHero
         label="About Coach Tommy Brown"
-        title={<>Built by the Game. <span className="text-orange">Proven by Results.</span></>}
-        subtitle="Two decades of elite coaching, mentorship, and leadership development — creating warriors one athlete at a time."
+        title={<>Built by the Game. <span className="text-orange">Tested by Life.</span></>}
+        subtitle="Former college head coach. Athletic director. Speaker. Author. 20 years in the game, 1,000+ teams trained, and a story that gives the message its weight."
       />
 
       {/* BIO */}
@@ -71,20 +71,20 @@ export default function AboutTommy() {
           </div>
           <div className="inner-text fade-up stagger-2">
             <span className="section-label">The Story</span>
-            <h2 className="section-title">A Warrior Forged Through Experience.</h2>
+            <h2 className="section-title">A Coach Who Has Lived It.</h2>
             <div className="orange-bar" />
             <p className="inner-body">
-              Coach Tommy Brown's journey from competitive athlete to nationally recognized mental performance trainer and leadership coach is a story of relentless pursuit of excellence — and a deep belief in the transformative power of the right environment and the right mindset.
+              Tommy Brown spent 20 years in college basketball as a head coach and assistant at the Division I level, including time in the Big Ten and Big South. He has been an athletic director. He has built programs, won games, and been fired. He rebuilt his career, his identity, and his purpose from the ground up.
             </p>
             <p className="inner-body mt-3">
-              After a decorated playing career and over two decades of coaching at the high school and Division I collegiate levels, Coach Tommy has seen firsthand what separates programs that win one championship from programs that build sustained excellence. The answer is always culture — and culture starts in the mind.
+              He grew up with dyslexia and ADHD. Graduating college took everything he had. He has lost friends, walked through family pain, and experienced the kind of life that forces deeper roots. That is why his message carries both grit and empathy.
             </p>
             <p className="inner-body mt-3">
-              Today, Coach Tommy works with athletes, coaches, and organizations across the country, delivering the mental performance frameworks, leadership tools, and cultural standards that create champions — on and off the field.
+              Today, Tommy travels the country leading Warrior Culture sessions for athletic teams, businesses, faculty groups, and organizations. Over 1,000 teams in 43 states. He goes to them. He leads every session personally. And his message reaches because it comes from someone who has been through enough to stop pretending.
             </p>
             <div className="philosophy-quote mt-4">
               <blockquote>
-                "I don't just train athletes. I forge warriors. People who are committed to excellence in everything they do — not just when it's convenient."
+                "I don't just teach mental toughness. I've had to live it. That's the difference."
               </blockquote>
               <cite>— Coach Tommy Brown</cite>
             </div>
@@ -97,7 +97,7 @@ export default function AboutTommy() {
         <div className="container">
           <div className="section-header fade-up">
             <span className="section-label">Career Journey</span>
-            <h2 className="section-title">The Path of a Warrior</h2>
+            <h2 className="section-title">The Path</h2>
             <div className="orange-bar" />
           </div>
           <div className="inner-two-col">
@@ -121,16 +121,16 @@ export default function AboutTommy() {
       <section className="section section-dark">
         <div className="container coaching-philosophy">
           <div className="section-header fade-up">
-            <span className="section-label">Coaching Philosophy</span>
-            <h2 className="section-title section-title-light">What Tommy Believes</h2>
+            <span className="section-label">What Tommy Believes</span>
+            <h2 className="section-title section-title-light">Coaching Philosophy</h2>
             <div className="orange-bar" />
           </div>
           <div className="philosophy-blocks fade-up stagger-2">
             {[
-              { title: 'Culture First', body: 'Every championship starts with culture. You cannot win consistently without an organizational DNA built on accountability, trust, and relentless pursuit of excellence.' },
-              { title: 'The Mind Leads', body: 'Physical talent is the entry ticket. Mental performance is the differentiator. Athletes who master their mindset unlock levels of performance that talent alone never could.' },
-              { title: 'People Over Plays', body: "Investing in the person first always produces the best athlete. When a young person knows they're valued as a human being, they give everything they have as a competitor." },
-              { title: 'Standards, Not Rules', body: 'Rules create compliance. Standards create ownership. Warrior Culture is built on standards that athletes choose to hold themselves to — because they believe in what they\'re building.' },
+              { title: 'Culture First', body: 'Every winning program starts with culture. You can have all the talent in the world, but if people are selfish, disconnected, or undisciplined, you will lose to teams that are tougher and more together than you.' },
+              { title: 'The Mind Leads', body: 'Most teams don\'t lose because of talent. They lose because they get beaten mentally. Confidence, composure, mistake response, emotional regulation. Win the war in your mind first.' },
+              { title: 'People Over Plays', body: 'When a person knows they are valued as a human being, they give everything they have as a competitor. Invest in the person. The athlete follows.' },
+              { title: 'Grit and Empathy Together', body: 'Toughness without empathy is dangerous. Empathy without grit is incomplete. The best coaches, leaders, and teams know when to push and when to listen.' },
             ].map((p, i) => (
               <div key={p.title} className={`philosophy-block stagger-${i + 1}`}>
                 <h3 className="philosophy-block-title">{p.title}</h3>
@@ -149,7 +149,7 @@ export default function AboutTommy() {
             <h2 className="section-title">Book Tommy to Speak</h2>
             <div className="orange-bar orange-bar-center" />
             <p className="section-subtitle" style={{ margin: '1rem auto 0', textAlign: 'center' }}>
-              Coach Tommy delivers powerful, high-energy keynotes and presentations that inspire athletes, coaches, and organizations to perform at their absolute best.
+              High-energy keynotes and presentations for teams, schools, athletic departments, businesses, and conferences. Tommy speaks the way he coaches: direct, personal, and practical.
             </p>
           </div>
           <div className="speaking-layout">
@@ -167,10 +167,10 @@ export default function AboutTommy() {
             <div className="speaking-formats fade-up stagger-2">
               <h3 className="speaking-formats-title">Speaking Formats</h3>
               {[
-                { format: 'Keynote Presentations', desc: '45–90 minute high-impact keynotes for athletic events, banquets, and conferences.' },
-                { format: 'Team Workshops', desc: 'Interactive half-day or full-day workshops combining speaking with exercises and application.' },
-                { format: 'Corporate Events', desc: 'Leadership and performance training for corporate teams and organizational leaders.' },
-                { format: 'School Programs', desc: 'Youth motivational programs for middle school, high school, and college students.' },
+                { format: 'Keynote Presentations', desc: '45-90 minute keynotes for athletic events, banquets, and conferences.' },
+                { format: 'Team Workshops', desc: 'Half-day or full-day workshops combining speaking with hands-on exercises.' },
+                { format: 'Corporate & Business Events', desc: 'Leadership and culture training for corporate teams and organizations.' },
+                { format: 'School Programs', desc: 'Programs for middle school, high school, and college students.' },
               ].map(f => (
                 <div key={f.format} className="speaking-format-item">
                   <h4>{f.format}</h4>
@@ -185,9 +185,9 @@ export default function AboutTommy() {
 
       <CTABanner
         label="Work With Tommy"
-        title="Ready to Elevate Your Program?"
-        subtitle="Whether you need a keynote speaker, a season-long partner, or a transformational camp experience — Tommy Brown delivers."
-        primaryCta="Book a Session"
+        title="Ready to Get Your Team in the Room?"
+        subtitle="Whether you need a session, a keynote, or a season-long partnership, Tommy will work with you to build something that lasts."
+        primaryCta="Get a Quote"
         secondaryCta="View Programs"
         secondaryCtaLink="/warrior-culture"
       />

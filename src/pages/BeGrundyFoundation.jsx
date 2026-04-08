@@ -7,9 +7,9 @@ import './InnerPage.css'
 import './BeGrundyFoundation.css'
 
 const teamMembers = [
-  { name: 'Tommy Brown', role: 'Founder & Executive Director', bio: 'Coach Tommy created the Be Grundy Foundation in honor of a beloved mentor whose belief in young people changed his life forever.' },
-  { name: 'Sarah Brown', role: 'Director of Programs', bio: 'Oversees all foundation programming, partnerships, and youth development initiatives across the region.' },
-  { name: 'Coach D. Williams', role: 'Youth Development Lead', bio: 'A former college athlete turned educator, Coach D. brings over 15 years of mentorship experience to every young person we serve.' },
+  { name: 'Tommy Brown', role: 'Co-Founder', bio: 'Former college head coach and founder of One Heartbeat Warriors. Tommy created the Be Grundy Foundation in honor of a mentor whose belief in him changed the trajectory of his life.' },
+  { name: 'Andrea Campbell-Brown', role: 'Co-Founder', bio: 'Co-founded the Be Grundy Foundation with Tommy. Oversees foundation strategy, partnerships, and community development initiatives.' },
+  { name: 'Coach D. Williams', role: 'Youth Development Lead', bio: 'Former college athlete turned educator with over 15 years of mentorship experience. Leads youth programming and on-the-ground impact.' },
 ]
 
 const impactGoals = [
@@ -60,13 +60,13 @@ export default function BeGrundyFoundation() {
               <h2 className="section-title">A Name That Means Everything.</h2>
               <div className="orange-bar" />
               <p className="inner-body">
-                The Be Grundy Foundation is named in honor of a man whose simple act of belief changed the trajectory of Coach Tommy Brown's life. "Grundy" was a mentor, a supporter, and a voice that told a young Tommy Brown — when he needed it most — that he was capable of something great.
+                The Be Grundy Foundation is named after Grundy, Tommy's rescue pitbull who survived over a year alone in the Tennessee woods. Grundy's story of grit and resilience became the foundation's symbol. But the name also honors every mentor, coach, and person who believed in a young person when nobody else did.
               </p>
               <p className="inner-body mt-3">
-                That kind of belief shouldn't be rare. It should be standard. The Be Grundy Foundation exists to make sure that every young person — regardless of zip code, background, or circumstance — has at least one person, one program, and one moment that convinces them they are capable of greatness.
+                Tommy and his wife Andrea Campbell-Brown co-founded the foundation because they believe that kind of belief should be available to every kid, not just the lucky ones. Regardless of zip code, background, or circumstance. One person believing in you can change everything.
               </p>
               <p className="inner-body mt-3">
-                Through sports-based mentorship programs, life skills workshops, academic support, and scholarship opportunities, we are putting the tools of success in the hands of youth who need them most.
+                Through sports-based mentorship, life skills workshops, academic support, and scholarships, the Be Grundy Foundation puts the tools of growth in the hands of young people who need them.
               </p>
             </div>
           </div>

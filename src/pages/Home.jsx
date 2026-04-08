@@ -6,38 +6,38 @@ import SEO from '../components/shared/SEO'
 import './Home.css'
 
 const stats = [
-  { value: '15+', label: 'Years Experience' },
-  { value: '500+', label: 'Athletes Trained' },
-  { value: '50+', label: 'Teams Served' },
-  { value: '100%', label: 'Warrior Mindset' },
+  { value: '1,000+', label: 'Teams Trained' },
+  { value: '43', label: 'States' },
+  { value: '20+', label: 'Years in Coaching' },
+  { value: 'D1', label: 'Head Coach & AD Experience' },
 ]
 
 const programs = [
   {
     icon: <Swords size={28} />,
     title: 'Warrior Culture Sessions',
-    desc: 'Team-wide mental performance and leadership training that builds championship culture, accountability, and cohesion from within.',
+    desc: 'Mental toughness, confidence, and leadership training for your team. Tommy comes to you and leads every session personally. No facilitators. No handoff.',
     link: '/warrior-culture',
     tag: 'Most Popular',
   },
   {
     icon: <Trophy size={28} />,
     title: 'Individual Camps',
-    desc: 'Intensive athlete development combining classroom mindset training with elite on-court skill work for serious competitors.',
+    desc: 'Classroom mindset training combined with on-court skill work for athletes ready to get serious about their game and their mentality.',
     link: '/individual-camps',
     tag: null,
   },
   {
     icon: <Brain size={28} />,
     title: 'Mindset Training',
-    desc: 'Performance psychology and leadership consulting for individual athletes, teams, and organizations ready to compete at the next level.',
+    desc: 'One-on-one and group coaching for athletes, coaches, and business leaders who want practical tools to handle pressure, lead better, and compete harder.',
     link: '/mindset-training',
     tag: null,
   },
   {
     icon: <Heart size={28} />,
     title: 'Be Grundy Foundation',
-    desc: 'Empowering underserved youth through sports, mentorship, and life skills — giving every kid a fighting chance.',
+    desc: 'Giving underserved youth the mentorship, life skills, and belief that every young person deserves. Named for the man who changed Tommy\'s life.',
     link: '/be-grundy-foundation',
     tag: null,
   },
@@ -45,22 +45,22 @@ const programs = [
 
 const testimonials = [
   {
-    quote: "Coach Tommy's Warrior Culture program completely transformed the way our team competed. We went from a talented group of individuals to a championship-caliber unit. His approach to mental toughness and accountability is unlike anything I've seen in 20 years of coaching.",
+    quote: "One Heartbeat's message is truly awesome. It is valuable information for athletes at any level. He covers toughness, being coachable, body language, being a great teammate - and does it in an extremely relatable way to today's student-athlete.",
+    name: 'Dan Earl',
+    title: 'Chattanooga Basketball',
+  },
+  {
+    quote: "Coach Tommy's Warrior Culture session changed the way our team competed. We went from a talented group of individuals to a team that actually held each other accountable. His approach to mental toughness is unlike anything I've seen in 20 years of coaching.",
     name: 'Coach Marcus Williams',
     title: 'Head Basketball Coach, Division I University',
   },
   {
-    quote: "The mindset training we received from One Heartbeat Warriors gave our athletes tools they'll use for the rest of their lives — not just in sports, but in everything they do. Tommy has a rare ability to connect with young people and push them beyond their limits.",
-    name: 'Coach Sarah Johnson',
-    title: 'Athletic Director, Midwest Conference',
-  },
-  {
-    quote: "After attending the individual camp, my son came back a different athlete. His confidence, his composure under pressure, and his leadership on the court all improved dramatically. Tommy Brown is the real deal — a world-class trainer and an even better mentor.",
+    quote: "After attending the individual camp, my son came back a different athlete. His confidence, his composure under pressure, and his leadership on the court all improved. Tommy Brown is the real deal.",
     name: 'Marcus Thompson',
     title: 'Parent of Division I Prospect',
   },
   {
-    quote: "We brought Tommy in for a full-season Warrior Culture program and the results spoke for themselves. Best defensive rating in program history. Zero internal drama. A team that genuinely loved competing for each other. That's the Tommy Brown effect.",
+    quote: "We brought Tommy in for a full-season Warrior Culture program and the results spoke for themselves. Best defensive rating in program history. Zero internal drama. A team that genuinely loved competing for each other.",
     name: 'Coach David Rivera',
     title: 'Head Football Coach, State Champions',
   },
@@ -130,7 +130,7 @@ export default function Home() {
     <div className="home">
       <SEO
         title="Home"
-        description="One Heartbeat Warriors — Elite mental performance and leadership training for athletes, coaches, and organizations. Build mental toughness, confidence, and championship culture."
+        description="Mental toughness, confidence, and leadership training for athletes, coaches, businesses, and organizations. Coach Tommy Brown has trained over 1,000 teams in 43 states. We come to you."
         path="/"
       />
       {/* ── HERO ── */}
@@ -146,10 +146,10 @@ export default function Home() {
             Better Leaders.
           </h1>
           <p className="home-hero-subtitle">
-            One Heartbeat Warriors helps athletes, coaches, and organizations develop mental toughness, confidence, and leadership through proven performance training.
+            Mental toughness, confidence, and leadership training for athletes, coaches, businesses, and organizations. We come to you.
           </p>
           <div className="home-hero-actions">
-            <Link to="/contact" className="btn btn-primary btn-lg">Book a Session</Link>
+            <Link to="/contact" className="btn btn-primary btn-lg">Get a Quote</Link>
             <Link to="/warrior-culture" className="btn btn-secondary btn-lg">Explore Programs</Link>
           </div>
         </div>
@@ -178,10 +178,10 @@ export default function Home() {
             <h2 className="section-title">One Heartbeat. One Standard. Zero Excuses.</h2>
             <div className="orange-bar" />
             <p className="mission-body">
-              We believe that championship performance starts in the mind. One Heartbeat Warriors exists to equip every athlete, coach, and team with the mental tools, leadership skills, and cultural foundation needed to compete at the highest level — on the court, in the classroom, and in life.
+              Winning starts in the mind. One Heartbeat Warriors exists to equip athletes, coaches, teams, businesses, and organizations with the mental tools and cultural standards needed to perform at their highest level. On the court, in the office, in life.
             </p>
             <p className="mission-body mt-3">
-              Through Warrior Culture, we don't just train athletes. We forge warriors — individuals with an unshakeable commitment to excellence, accountability to their teammates, and the mental fortitude to perform under any pressure.
+              Through Warrior Culture, we build people who are committed to excellence, accountable to the people around them, and tough enough to handle whatever comes next. Tommy has led sessions with over 1,000 college and high school athletic teams, business groups, faculty, and church organizations in 43 states.
             </p>
             <Link to="/about" className="btn btn-outline-orange mt-4">Meet Coach Tommy</Link>
           </div>
@@ -203,7 +203,7 @@ export default function Home() {
             <h2 className="section-title">Train. Lead. Dominate.</h2>
             <div className="orange-bar orange-bar-center" />
             <p className="section-subtitle section-subtitle-muted">
-              Every program is built around proven mental performance principles, leadership development, and real-world athlete training.
+              Every program is built on what actually works in real locker rooms, boardrooms, and team settings. Practical. Proven. Led personally by Coach Tommy.
             </p>
           </div>
           <div className="programs-grid">
@@ -247,14 +247,14 @@ export default function Home() {
             <h2 className="section-title">Built by the Game. Proven on Every Level.</h2>
             <div className="orange-bar" />
             <p className="about-preview-body">
-              Coach Tommy Brown is a nationally recognized mental performance trainer, leadership coach, and motivational speaker with over two decades of experience developing elite athletes and championship programs across the country.
+              Tommy Brown is a former college basketball head coach and athletic director who spent 20 years in the game, including Division I in the Big Ten and Big South. He now travels the country leading Warrior Culture sessions for athletic teams, businesses, and organizations. He's worked with over 1,000 teams in 43 states.
             </p>
             <ul className="about-credentials">
-              <li><span className="credential-dot" />Division I coaching experience</li>
-              <li><span className="credential-dot" />Award-winning motivational speaker</li>
-              <li><span className="credential-dot" />Founder, Be Grundy Foundation</li>
-              <li><span className="credential-dot" />Host, One Heartbeat Warriors Podcast</li>
-              <li><span className="credential-dot" />500+ athletes personally developed</li>
+              <li><span className="credential-dot" />Former D1 Head Coach & Athletic Director</li>
+              <li><span className="credential-dot" />1,000+ teams trained in 43 states</li>
+              <li><span className="credential-dot" />Speaker, author, and podcast host</li>
+              <li><span className="credential-dot" />Co-founder, Be Grundy Foundation</li>
+              <li><span className="credential-dot" />Works with teams, businesses, churches, and schools</li>
             </ul>
             <Link to="/about" className="btn btn-primary mt-4">Meet Tommy</Link>
           </div>
@@ -310,10 +310,10 @@ export default function Home() {
         <div className="container final-cta-content">
           <span className="section-label" style={{ color: 'rgba(255,255,255,0.8)' }}>Ready to Elevate?</span>
           <h2 className="final-cta-title display-headline">
-            Bring Warrior Culture to Your Program
+            Host a Warrior Culture Session
           </h2>
           <p className="final-cta-subtitle">
-            Whether it's a team session, individual camp, keynote speech, or season-long partnership — let's build something great together.
+            Tommy comes to your team, your campus, your organization. Team sessions, department-wide clinics, keynotes, or season-long partnerships. Let's get your people in the room.
           </p>
           <div className="final-cta-actions">
             <Link to="/contact" className="btn btn-white btn-lg">Request Information</Link>

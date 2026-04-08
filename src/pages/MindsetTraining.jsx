@@ -51,8 +51,8 @@ export default function MindsetTraining() {
       <PageHero
         label="Performance Psychology"
         title={<>Mindset <span className="text-orange">Training</span></>}
-        subtitle="Proven performance psychology and leadership coaching for athletes, teams, and organizations ready to compete at the absolute highest level."
-        cta="Book a Consultation"
+        subtitle="Practical mindset and leadership coaching for athletes, coaches, teams, and business leaders. Built on 20 years of real coaching experience, not theory."
+        cta="Get a Quote"
         ctaLink="/contact"
         secondaryCta="View Programs"
         secondaryCtaLink="/warrior-culture"
@@ -66,14 +66,14 @@ export default function MindsetTraining() {
             <h2 className="section-title">The Difference Between Good and Great is Mental.</h2>
             <div className="orange-bar" />
             <p className="inner-body">
-              Elite athletes at every level have the physical talent to compete. What separates champions from contenders is what happens between the ears. Mental performance training is no longer optional — it's the deciding factor in who wins and who watches.
+              Most people don't lose because of talent. They lose because they get beaten mentally. Confidence, composure, mistake response, how you handle pressure when everything is on the line. That's what separates people who perform from people who fold.
             </p>
             <p className="inner-body mt-3">
-              Coach Tommy's mindset training programs are built on two decades of real-world experience working with elite athletes and championship programs. These aren't motivational speeches — they're proven, science-backed frameworks that change how athletes think, compete, and lead.
+              Tommy's mindset training is built on 20 years of coaching at the high school and Division I level. This is practical, in-the-trenches work for athletes, coaches, business teams, and anyone who needs to perform when it counts. No textbook psychology. Real tools you can use immediately.
             </p>
             <div className="philosophy-quote mt-4">
               <blockquote>
-                "The warrior doesn't wait for perfect conditions. The warrior creates perfect conditions with their mindset."
+                "Win the war in your mind. Everything else follows."
               </blockquote>
               <cite>— Coach Tommy Brown</cite>
             </div>
