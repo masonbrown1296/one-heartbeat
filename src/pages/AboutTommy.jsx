@@ -39,6 +39,7 @@ const speakingTopics = [
 export default function AboutTommy() {
   const bioRef = useScrollAnimation()
   const careerRef = useScrollAnimation()
+  const philosophyRef = useScrollAnimation()
   const speakingRef = useScrollAnimation()
 
   return (
@@ -118,7 +119,7 @@ export default function AboutTommy() {
       </section>
 
       {/* PHILOSOPHY */}
-      <section className="section section-dark">
+      <section className="section section-dark" ref={philosophyRef}>
         <div className="container coaching-philosophy">
           <div className="section-header fade-up">
             <span className="section-label">What Tommy Believes</span>

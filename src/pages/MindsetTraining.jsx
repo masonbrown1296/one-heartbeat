@@ -37,6 +37,7 @@ const outcomes = [
 ]
 
 export default function MindsetTraining() {
+  const introRef = useScrollAnimation()
   const servicesRef = useScrollAnimation()
   const outcomesRef = useScrollAnimation()
   const processRef = useScrollAnimation()
@@ -59,7 +60,7 @@ export default function MindsetTraining() {
       />
 
       {/* INTRO */}
-      <section className="section section-white">
+      <section className="section section-white" ref={introRef}>
         <div className="container inner-two-col">
           <div className="inner-text fade-up">
             <span className="section-label">The Mental Game</span>

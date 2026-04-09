@@ -27,6 +27,7 @@ const waysToSupport = [
 ]
 
 export default function BeGrundyFoundation() {
+  const missionRef = useScrollAnimation()
   const storyRef = useScrollAnimation()
   const impactRef = useScrollAnimation()
   const teamRef = useScrollAnimation()
@@ -74,7 +75,7 @@ export default function BeGrundyFoundation() {
       </section>
 
       {/* MISSION */}
-      <section className="section section-dark">
+      <section className="section section-dark" ref={missionRef}>
         <div className="container mission-statement-block">
           <div className="mission-statement-content fade-in">
             <span className="section-label">Our Mission</span>

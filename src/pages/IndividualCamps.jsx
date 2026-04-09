@@ -23,6 +23,7 @@ const onCourtTopics = [
 ]
 
 export default function IndividualCamps() {
+  const overviewRef = useScrollAnimation()
   const classRef = useScrollAnimation()
   const courtRef = useScrollAnimation()
   const detailsRef = useScrollAnimation()
@@ -45,7 +46,7 @@ export default function IndividualCamps() {
       />
 
       {/* OVERVIEW */}
-      <section className="section section-white">
+      <section className="section section-white" ref={overviewRef}>
         <div className="container inner-two-col">
           <div className="inner-text fade-up">
             <span className="section-label">Camp Overview</span>
