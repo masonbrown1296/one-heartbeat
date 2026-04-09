@@ -24,8 +24,7 @@ export default function Footer() {
           <div className="footer-grid">
             <div className="footer-brand">
               <Link to="/" className="footer-logo">
-                <span className="footer-logo-main">ONE HEARTBEAT</span>
-                <span className="footer-logo-sub">WARRIORS</span>
+                <img src="/ohb-logo-white-colorsword.svg" alt="One Heartbeat Warriors" className="footer-logo-img" />
               </Link>
               <p className="footer-tagline">
                 Building tougher athletes, stronger teams, and better leaders through elite mental performance and leadership training.

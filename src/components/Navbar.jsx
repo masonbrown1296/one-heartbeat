@@ -37,8 +37,7 @@ export default function Navbar() {
     <header className={`navbar${isScrolled ? ' scrolled' : ''}`}>
       <div className="navbar-inner">
         <Link to="/" className="navbar-logo" onClick={close}>
-          <span className="logo-line1">ONE HEARTBEAT</span>
-          <span className="logo-line2">WARRIORS</span>
+          <img src="/ohb-logo-white-colorsword.svg" alt="One Heartbeat Warriors" className="navbar-logo-img" />
         </Link>
 
         <nav className={`navbar-nav${isOpen ? ' open' : ''}`} aria-label="Main navigation">
