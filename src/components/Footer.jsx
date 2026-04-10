@@ -10,6 +10,7 @@ const footerLinks = {
   ],
   Company: [
     { to: '/about', label: 'About Tommy' },
+    { to: '/events', label: 'Events' },
     { to: '/media', label: 'Media & Podcast' },
     { to: '/blog', label: 'Blog' },
     { to: '/contact', label: 'Contact' },
@@ -30,11 +31,11 @@ export default function Footer() {
                 Building tougher athletes, stronger teams, and better leaders through elite mental performance and leadership training.
               </p>
               <div className="footer-contact-info">
-                <a href="mailto:info@oneheartbeatwarriors.com" className="footer-contact-link">
-                  info@oneheartbeatwarriors.com
+                <a href="mailto:tbrown@oneheartbeatwarriors.com" className="footer-contact-link">
+                  tbrown@oneheartbeatwarriors.com
                 </a>
-                <a href="tel:+15555550100" className="footer-contact-link">
-                  (555) 555-0100
+                <a href="tel:+14232844614" className="footer-contact-link">
+                  423-284-4614
                 </a>
               </div>
               <Link to="/contact" className="btn btn-primary btn-sm footer-cta">

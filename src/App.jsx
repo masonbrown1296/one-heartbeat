@@ -13,6 +13,7 @@ import Media from './pages/Media'
 import Blog from './pages/Blog'
 import BlogPost from './pages/BlogPost'
 import Contact from './pages/Contact'
+import Events from './pages/Events'
 
 function ScrollToTop() {
   const { pathname } = useLocation()
@@ -45,6 +46,7 @@ function AppLayout() {
           <Route path="/media" element={<Media />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:slug" element={<BlogPost />} />
+          <Route path="/events" element={<Events />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </main>

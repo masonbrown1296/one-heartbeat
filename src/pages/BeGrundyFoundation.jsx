@@ -49,6 +49,7 @@ export default function BeGrundyFoundation() {
               <img src="/ohb-images/IMG_2306.jpg" alt="Be Grundy Foundation youth event" className="grundy-img" loading="lazy" style={{ borderRadius: '1rem', width: '100%', objectFit: 'cover' }} />
             </div>
             <div className="grundy-story-text">
+              <img src="/begrundy-logo-blue.svg" alt="Be Grundy Foundation" style={{ height: 56, width: 'auto', display: 'block', marginBottom: '1.25rem' }} />
               <span className="section-label">Our Story</span>
               <h2 className="section-title">A Name That Means Everything.</h2>
               <div className="orange-bar" />
