@@ -45,6 +45,7 @@ export default function WarriorCulture() {
   const deptRef = useScrollAnimation()
   const qualitiesRef = useScrollAnimation()
   const differentRef = useScrollAnimation()
+  const reasonsRef = useScrollAnimation()
 
   return (
     <div>
@@ -207,7 +208,7 @@ export default function WarriorCulture() {
       </section>
 
       {/* TOP 5 REASONS */}
-      <section className="section section-dark">
+      <section className="section section-dark" ref={reasonsRef}>
         <div className="container">
           <div className="section-header section-header-center fade-up">
             <span className="section-label">Why Book a Session</span>

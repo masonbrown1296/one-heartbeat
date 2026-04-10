@@ -41,6 +41,7 @@ export default function MindsetTraining() {
   const servicesRef = useScrollAnimation()
   const outcomesRef = useScrollAnimation()
   const processRef = useScrollAnimation()
+  const virtualRef = useScrollAnimation()
 
   return (
     <div>
@@ -157,7 +158,7 @@ export default function MindsetTraining() {
       </section>
 
       {/* VIRTUAL COACHING */}
-      <section className="section section-light">
+      <section className="section section-light" ref={virtualRef}>
         <div className="container">
           <div className="section-header section-header-center fade-up">
             <span className="section-label">Virtual Coaching</span>
