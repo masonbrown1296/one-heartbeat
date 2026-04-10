@@ -8,30 +8,35 @@ import './InnerPage.css'
 import './AboutTommy.css'
 
 const highlights = [
-  { icon: <Trophy size={20} />, label: 'Former D1 Head Coach & Athletic Director' },
+  { icon: <Trophy size={20} />, label: 'Former NCAA Head Coach & Athletic Director' },
   { icon: <Users size={20} />, label: '1,000+ Teams Trained in 43 States' },
   { icon: <Mic size={20} />, label: 'Speaker & Author' },
   { icon: <Radio size={20} />, label: 'Podcast Host' },
   { icon: <Heart size={20} />, label: 'Co-Founder, Be Grundy Foundation' },
-  { icon: <Medal size={20} />, label: 'Big Ten & Big South Experience' },
+  { icon: <Medal size={20} />, label: '2008 NAIA National Coach of the Year' },
 ]
 
 const career = [
-  { year: '2003-2008', title: 'College Playing Career', desc: 'Four-year college athlete. Developed the competitive drive and work ethic that would define his coaching career.' },
-  { year: '2008-2012', title: 'High School Coach & AD', desc: 'Began coaching at the high school level and served as Athletic Director. Showed an immediate ability to connect with young athletes and build program culture.' },
-  { year: '2012-2016', title: 'Division I Assistant Coach', desc: 'Moved to Division I athletics in the Big South conference, working with college athletes and developing the mental performance frameworks behind Warrior Culture.' },
-  { year: '2016-2019', title: 'Head Coach & Program Builder', desc: 'Led programs to postseason success. Built a reputation as one of the most effective culture-builders in collegiate athletics.' },
-  { year: '2019', title: 'Founded One Heartbeat Warriors', desc: 'Launched One Heartbeat to bring Warrior Culture sessions to teams, programs, and organizations nationwide. Now over 1,000 teams in 43 states.' },
-  { year: '2021', title: 'Co-Founded Be Grundy Foundation', desc: 'Created the Be Grundy Foundation with his wife Andrea Campbell-Brown to serve underserved youth through sports, mentorship, and life skills.' },
+  { year: '1989–1993', title: 'College Playing Career', desc: 'Four-year starter and All-American at Covenant College. Finished as a top-five all-time leading scorer and second all-time leading rebounder in program history. Built the grit and competitive edge that would define his coaching career.' },
+  { year: '1994–1998', title: 'High School Coach — Orangewood Christian', desc: 'Began coaching at the high school level, quickly establishing a reputation for connecting with players and building disciplined, competitive teams.' },
+  { year: '1998–2005', title: 'Head Coach — Bluefield College', desc: 'Built the program into a consistent winner with conference championships and national tournament appearances.' },
+  { year: '2004–2005', title: 'Director of Athletics — Bluefield College', desc: 'Oversaw the entire athletic department while continuing as head coach — managing staffing, operations, and program development across all sports.' },
+  { year: '2005–2016', title: 'Head Coach — Lee University', desc: '13 straight 20-win seasons. 6× Conference Coach of the Year. 2008 NAIA National Coach of the Year. Multiple national tournament appearances and deep runs. Established himself as one of the top program builders and player development coaches in college basketball.' },
+  { year: '2016–2017', title: 'Assistant Coach — University of Illinois (D1)', desc: 'Contributed to scouting, recruiting, and player development at the Big Ten level — the highest level of college basketball.' },
+  { year: '2017–2018', title: 'Assistant Coach — Presbyterian College (D1)', desc: 'Continued Division I experience in the Big South Conference, refining the mental performance principles that would become Warrior Culture.' },
+  { year: '2018–2020', title: 'Athletic Director & Admissions — Boyd Buchanan School', desc: 'Led the athletic department, hired coaches, built culture, and drove student recruitment and enrollment efforts.' },
+  { year: '2013–Present', title: 'Founder — One Heartbeat Warriors', desc: 'Launched One Heartbeat to develop grit, resilience, and confidence in athletes, teams, and organizations. Now over 1,000 teams trained in 43 states.' },
+  { year: '2025–Present', title: 'Co-Founder — The Be Grundy Foundation', desc: 'Co-founded a nonprofit with Andrea Campbell-Brown focused on developing grit and resilience, with a special emphasis on supporting female athletes and expanding access to mental performance training.' },
 ]
 
 const speakingTopics = [
-  'Building Championship Culture',
+  'The 10 Qualities of a Warrior',
+  'The 5 Qualities of Being a Good Teammate',
+  'Building a Pitbull Mentality on the Court or Field',
   'Mental Toughness and Resilience',
   'Leadership Under Pressure',
   'The Warrior Mindset',
   'Coaching the Anxious Generation',
-  'Team Chemistry and Communication',
   'Grit and Empathy in Leadership',
   'Overcoming Adversity',
 ]
@@ -46,14 +51,14 @@ export default function AboutTommy() {
     <div>
       <SEO
         title="About Coach Tommy Brown"
-        description="Former D1 head coach and athletic director. 20 years in coaching. 1,000+ teams trained in 43 states. Tommy Brown helps people win the war in their minds."
+        description="Former NCAA head coach and athletic director. 2008 NAIA National Coach of the Year. 1,000+ teams trained in 43 states. Tommy Brown helps people win the war in their minds."
         path="/about"
         image="https://one-heartbeat.vercel.app/headshot.webp"
       />
       <PageHero
         label="About Coach Tommy Brown"
         title={<>Built by the Game. <span className="text-orange">Tested by Life.</span></>}
-        subtitle="Former college head coach. Athletic director. Speaker. Author. 20 years in the game, 1,000+ teams trained, and a story that gives the message its weight."
+        subtitle="NCAA head coach. Athletic director. 2008 NAIA National Coach of the Year. 20 years in the game, 1,000+ teams trained, and a story that gives the message its weight."
       />
 
       {/* BIO */}
@@ -75,7 +80,7 @@ export default function AboutTommy() {
             <h2 className="section-title">A Coach Who Has Lived It.</h2>
             <div className="orange-bar" />
             <p className="inner-body">
-              Tommy Brown spent 20 years in college basketball as a head coach and assistant at the Division I level, including time in the Big Ten and Big South. He has been an athletic director. He has built programs, won games, and been fired. He rebuilt his career, his identity, and his purpose from the ground up.
+              Tommy Brown spent over 20 years in college basketball — building programs, winning games, and being fired. He was head coach at Bluefield College and Lee University, where he put together 13 straight 20-win seasons, won 6 Conference Coach of the Year awards, and was named the 2008 NAIA National Coach of the Year. He later served as a Division I assistant at the University of Illinois and Presbyterian College, and as an athletic director at multiple schools.
             </p>
             <p className="inner-body mt-3">
               He grew up with dyslexia and ADHD. Graduating college took everything he had. He has lost friends, walked through family pain, and experienced the kind of life that forces deeper roots. That is why his message carries both grit and empathy.
@@ -128,10 +133,9 @@ export default function AboutTommy() {
           </div>
           <div className="philosophy-blocks fade-up stagger-2">
             {[
-              { title: 'Culture First', body: 'Every winning program starts with culture. You can have all the talent in the world, but if people are selfish, disconnected, or undisciplined, you will lose to teams that are tougher and more together than you.' },
+              { title: 'Team First', body: 'Every winning program starts with the team. You can have all the talent in the world, but if people are selfish, disconnected, or undisciplined, you will lose to teams that are tougher and more together than you.' },
               { title: 'The Mind Leads', body: 'Most teams don\'t lose because of talent. They lose because they get beaten mentally. Confidence, composure, mistake response, emotional regulation. Win the war in your mind first.' },
-              { title: 'People Over Plays', body: 'When a person knows they are valued as a human being, they give everything they have as a competitor. Invest in the person. The athlete follows.' },
-              { title: 'Grit and Empathy Together', body: 'Toughness without empathy is dangerous. Empathy without grit is incomplete. The best coaches, leaders, and teams know when to push and when to listen.' },
+              { title: 'Grit and Empathy Together', body: 'Toughness without empathy is dangerous. Empathy without grit is soft. The best coaches, leaders, and teams know when to push and when to listen.' },
             ].map((p, i) => (
               <div key={p.title} className={`philosophy-block stagger-${i + 1}`}>
                 <h3 className="philosophy-block-title">{p.title}</h3>
@@ -170,8 +174,9 @@ export default function AboutTommy() {
               {[
                 { format: 'Keynote Presentations', desc: '45-90 minute keynotes for athletic events, banquets, and conferences.' },
                 { format: 'Team Workshops', desc: 'Half-day or full-day workshops combining speaking with hands-on exercises.' },
-                { format: 'Corporate & Business Events', desc: 'Leadership and culture training for corporate teams and organizations.' },
+                { format: 'Corporate & Business Events', desc: 'Leadership training for corporate teams and organizations.' },
                 { format: 'School Programs', desc: 'Programs for middle school, high school, and college students.' },
+                { format: 'Church Groups', desc: 'Faith-based leadership and mental toughness presentations for congregations and youth groups.' },
               ].map(f => (
                 <div key={f.format} className="speaking-format-item">
                   <h4>{f.format}</h4>
@@ -179,6 +184,43 @@ export default function AboutTommy() {
                 </div>
               ))}
               <Link to="/contact" className="btn btn-primary mt-4">Book Tommy to Speak</Link>
+            </div>
+          </div>
+
+          {/* INDIVIDUAL MINDSET TRAINING */}
+          <div style={{ marginTop: '4rem', paddingTop: '3rem', borderTop: '1px solid var(--gray-200)' }}>
+            <div className="section-header fade-up">
+              <span className="section-label">Virtual Coaching</span>
+              <h3 className="section-title" style={{ fontSize: 'clamp(1.5rem, 3vw, 2rem)' }}>Small Group & Individual Mindset Training</h3>
+              <div className="orange-bar" />
+              <p className="section-subtitle">For athletes, leaders, and anyone who is tired of self-doubt running the show.</p>
+            </div>
+            <div className="split-section fade-up stagger-1" style={{ marginTop: '2rem' }}>
+              <div className="split-card split-card-navy">
+                <h3 className="split-card-title">1-on-1 Virtual Coaching</h3>
+                <p style={{ color: 'rgba(255,255,255,0.75)', fontSize: '0.9375rem', lineHeight: 1.7, marginBottom: '1rem' }}>
+                  60-minute sessions via Zoom or phone. Deep, honest, real-world coaching with no filters. You'll leave every session with a clear, no-excuse action plan.
+                </p>
+                <ul className="split-card-list">
+                  {['Stop overthinking and start competing', 'Rebuild grit after setbacks', 'Develop real, process-based confidence', 'Get clear on your next move'].map(i => (
+                    <li key={i} className="split-card-item">{i}</li>
+                  ))}
+                </ul>
+              </div>
+              <div className="split-card split-card-orange">
+                <h3 className="split-card-title">Small Group Mindset Circles</h3>
+                <p style={{ color: 'rgba(255,255,255,0.85)', fontSize: '0.9375rem', lineHeight: 1.7, marginBottom: '1rem' }}>
+                  Virtual sessions for 4–6 people, weekly or bi-weekly. A space for honest conversations, accountability, and building toughness together — without losing your humanity.
+                </p>
+                <ul className="split-card-list">
+                  {['Athletes stuck in their head or playing scared', 'Teams struggling with mistakes or excuses', 'Leaders who need to toughen their mindset', 'Anyone tired of playing small'].map(i => (
+                    <li key={i} className="split-card-item">{i}</li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+            <div className="text-center mt-4 fade-up stagger-2">
+              <Link to="/contact" className="btn btn-primary btn-lg">Inquire About Virtual Coaching</Link>
             </div>
           </div>
         </div>

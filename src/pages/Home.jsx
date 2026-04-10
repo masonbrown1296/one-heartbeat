@@ -9,7 +9,7 @@ const stats = [
   { value: '1,000+', label: 'Teams Trained' },
   { value: '43', label: 'States' },
   { value: '20+', label: 'Years in Coaching' },
-  { value: 'D1', label: 'Head Coach & AD Experience' },
+  { value: '6×', label: 'Conference Coach of the Year' },
 ]
 
 const programs = [
@@ -45,24 +45,34 @@ const programs = [
 
 const testimonials = [
   {
-    quote: "One Heartbeat's message is truly awesome. It is valuable information for athletes at any level. He covers toughness, being coachable, body language, being a great teammate - and does it in an extremely relatable way to today's student-athlete.",
+    quote: "One Heartbeat's message is truly awesome. It is valuable information for athletes at any level. He covers toughness, being coachable, body language, being a great teammate — and does it in an extremely relatable way to today's student-athlete.",
     name: 'Dan Earl',
     title: 'Chattanooga Basketball',
   },
   {
-    quote: "Coach Tommy's Warrior Culture session changed the way our team competed. We went from a talented group of individuals to a team that actually held each other accountable. His approach to mental toughness is unlike anything I've seen in 20 years of coaching.",
-    name: 'Coach Marcus Williams',
-    title: 'Head Basketball Coach, Division I University',
+    quote: "Tommy is as real as it gets. No fluff, no corporate jargon — just truth that people can apply. Our team was engaged the entire time, and the feedback afterward was outstanding.",
+    name: 'Ryan Ross',
+    title: 'Axle Logistics',
   },
   {
-    quote: "After attending the individual camp, my son came back a different athlete. His confidence, his composure under pressure, and his leadership on the court all improved. Tommy Brown is the real deal.",
-    name: 'Marcus Thompson',
-    title: 'Parent of Division I Prospect',
+    quote: "Tommy is real! You don't get fugazi stuff! He says what you need your athletes to hear! Our players walked away more aware of how their attitude, effort, and response affect the whole team. Tommy has a gift for saying hard things in a way athletes can actually receive.",
+    name: 'Jason Shaver',
+    title: 'Franklin County Boys Basketball Coach',
   },
   {
-    quote: "We brought Tommy in for a full-season Warrior Culture program and the results spoke for themselves. Best defensive rating in program history. Zero internal drama. A team that genuinely loved competing for each other.",
-    name: 'Coach David Rivera',
-    title: 'Head Football Coach, State Champions',
+    quote: "Our girls connected with Tommy right away. He brought a mix of toughness, honesty, and encouragement that made a real impact. His session helped them think differently about confidence, pressure, and how they respond when things don't go their way.",
+    name: 'Deidra Cox',
+    title: 'Cedar Bluff High School Volleyball Coach',
+  },
+  {
+    quote: "Tommy had a powerful impact on both our students and our faculty. His ability to tailor his message to each group while reinforcing the same core principles made it especially effective for our entire school community.",
+    name: 'Earl Sadler',
+    title: 'Head of School, Pamlico Christian Academy',
+  },
+  {
+    quote: "Warrior Culture is more than a session. It's a mindset shift. Tommy helped our players see how much control they have over their attitude, effort, and response.",
+    name: 'Chris Randall',
+    title: 'White Plains High School Boys Basketball Coach',
   },
 ]
 
@@ -220,11 +230,30 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── TESTIMONIALS ── */}
+      {/* ── FEATURED QUOTE ── */}
       <section className="section section-dark">
         <div className="container">
+          <div style={{ maxWidth: 780, margin: '0 auto', textAlign: 'center' }}>
+            <div style={{ fontSize: '4rem', lineHeight: 0.8, color: 'var(--orange-500)', opacity: 0.6, marginBottom: '1.5rem', fontFamily: 'Georgia, serif' }}>&ldquo;</div>
+            <blockquote style={{ fontSize: 'clamp(1.1rem, 2.5vw, 1.375rem)', lineHeight: 1.75, color: 'rgba(255,255,255,0.9)', fontStyle: 'italic', fontWeight: 300, marginBottom: '1.75rem' }}>
+              One Heartbeat's message is truly awesome. It is valuable information for athletes at any level. He covers toughness, being coachable, body language, being a great teammate — and does it in an extremely relatable way to today's student-athlete.
+            </blockquote>
+            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.75rem' }}>
+              <div style={{ width: 40, height: 40, borderRadius: '50%', background: 'var(--orange-500)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#fff', fontWeight: 700, fontSize: '1rem', fontFamily: 'var(--font-display)', flexShrink: 0 }}>D</div>
+              <div style={{ textAlign: 'left' }}>
+                <p style={{ fontFamily: 'var(--font-display)', fontSize: '0.95rem', fontWeight: 700, color: '#fff', textTransform: 'uppercase', letterSpacing: '0.04em' }}>Dan Earl</p>
+                <p style={{ fontSize: '0.8rem', color: 'rgba(255,255,255,0.5)' }}>Chattanooga Basketball</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── TESTIMONIALS ── */}
+      <section className="section section-dark" style={{ paddingTop: 0 }}>
+        <div className="container">
           <div className="section-header section-header-center">
-            <span className="section-label">What Coaches & Athletes Say</span>
+            <span className="section-label">What Coaches & Leaders Say</span>
             <h2 className="section-title section-title-light">Warrior Results</h2>
             <div className="orange-bar orange-bar-center" />
           </div>
@@ -250,7 +279,7 @@ export default function Home() {
               Tommy Brown is a former college basketball head coach and athletic director who spent 20 years in the game, including Division I in the Big Ten and Big South. He now travels the country leading Warrior Culture sessions for athletic teams, businesses, and organizations. He's worked with over 1,000 teams in 43 states.
             </p>
             <ul className="about-credentials">
-              <li><span className="credential-dot" />Former D1 Head Coach & Athletic Director</li>
+              <li><span className="credential-dot" />Former NCAA Head Coach & Athletic Director</li>
               <li><span className="credential-dot" />1,000+ teams trained in 43 states</li>
               <li><span className="credential-dot" />Speaker, author, and podcast host</li>
               <li><span className="credential-dot" />Co-founder, Be Grundy Foundation</li>

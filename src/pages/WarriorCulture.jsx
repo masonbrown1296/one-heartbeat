@@ -206,6 +206,34 @@ export default function WarriorCulture() {
         </div>
       </section>
 
+      {/* TOP 5 REASONS */}
+      <section className="section section-dark">
+        <div className="container">
+          <div className="section-header section-header-center fade-up">
+            <span className="section-label">Why Book a Session</span>
+            <h2 className="section-title section-title-light">Top 5 Reasons to Host a Warrior Culture Session</h2>
+            <div className="orange-bar orange-bar-center" />
+          </div>
+          <div style={{ maxWidth: 760, margin: '2.5rem auto 0', display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
+            {[
+              'Your team will have more mental toughness and confidence as a result.',
+              'Tommy will get your back. He is not worried about feelings or parents.',
+              'It is very affordable.',
+              'The session can be customized to meet your team\'s specific needs.',
+              'Your team will have more mental toughness and confidence. Yes — it\'s worth saying twice.',
+            ].map((reason, i) => (
+              <div key={i} className="fade-up" style={{ display: 'flex', gap: '1.25rem', alignItems: 'flex-start', background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '0.75rem', padding: '1.25rem 1.5rem' }}>
+                <span style={{ fontFamily: 'var(--font-display)', fontSize: '2rem', fontWeight: 900, color: 'var(--orange-500)', lineHeight: 1, flexShrink: 0, minWidth: '2rem', textAlign: 'center' }}>{i + 1}</span>
+                <p style={{ color: 'rgba(255,255,255,0.85)', fontSize: '1.0625rem', lineHeight: 1.7, margin: 0 }}>{reason}</p>
+              </div>
+            ))}
+          </div>
+          <div className="text-center mt-6 fade-up">
+            <Link to="/contact" className="btn btn-primary btn-lg">Get a Quote</Link>
+          </div>
+        </div>
+      </section>
+
       <CTABanner
         label="Ready to Build Warrior Culture?"
         title="Host a Session for Your Team"

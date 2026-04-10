@@ -156,10 +156,51 @@ export default function MindsetTraining() {
         </div>
       </section>
 
+      {/* VIRTUAL COACHING */}
+      <section className="section section-light">
+        <div className="container">
+          <div className="section-header section-header-center fade-up">
+            <span className="section-label">Virtual Coaching</span>
+            <h2 className="section-title">Small Group & Individual Mindset Training</h2>
+            <div className="orange-bar orange-bar-center" />
+            <p className="section-subtitle" style={{ textAlign: 'center', margin: '1rem auto 0' }}>
+              For athletes, coaches, leaders, and anyone who is tired of self-doubt running the show. Done virtually — no travel required.
+            </p>
+          </div>
+          <div className="split-section fade-up stagger-1" style={{ marginTop: '2.5rem' }}>
+            <div className="split-card split-card-navy">
+              <h3 className="split-card-title">1-on-1 Virtual Coaching</h3>
+              <p style={{ color: 'rgba(255,255,255,0.75)', fontSize: '0.9375rem', lineHeight: 1.7, marginBottom: '1.25rem' }}>
+                60 minutes. Zoom or phone. Deep, honest, real-world coaching — no fluff. You'll leave every session with a clear, no-excuse plan you can execute immediately.
+              </p>
+              <ul className="split-card-list">
+                {['Stop overthinking and start competing', 'Rebuild grit and confidence after setbacks', 'Develop a process-based mindset that holds under pressure', 'Get clear on your next move and commit to it'].map(i => (
+                  <li key={i} className="split-card-item">{i}</li>
+                ))}
+              </ul>
+            </div>
+            <div className="split-card split-card-orange">
+              <h3 className="split-card-title">Small Group Mindset Circles</h3>
+              <p style={{ color: 'rgba(255,255,255,0.85)', fontSize: '0.9375rem', lineHeight: 1.7, marginBottom: '1.25rem' }}>
+                4–6 people. Virtual. Weekly or bi-weekly. A space for real conversations, honest accountability, and building toughness together — without losing your humanity.
+              </p>
+              <ul className="split-card-list">
+                {['Athletes stuck in their head or playing scared', 'Teams struggling with mistakes or splintered by excuses', 'Leaders who need to toughen their mindset', 'Anyone tired of self-doubt running the show'].map(i => (
+                  <li key={i} className="split-card-item">{i}</li>
+                ))}
+              </ul>
+            </div>
+          </div>
+          <div className="text-center mt-4 fade-up stagger-2">
+            <Link to="/contact" className="btn btn-primary btn-lg">Inquire About Virtual Coaching</Link>
+          </div>
+        </div>
+      </section>
+
       <CTABanner
         label="Ready to Compete at the Highest Level?"
         title="Start Your Mindset Training Today"
-        subtitle="Schedule a free consultation with Coach Tommy to discuss your goals and build a custom mindset training program."
+        subtitle="Get on a quick call with Tommy to discuss your goals. He'll tell you exactly what he can do and what it costs."
         primaryCta="Book a Consultation"
         secondaryCta="View Speaking"
         secondaryCtaLink="/contact"

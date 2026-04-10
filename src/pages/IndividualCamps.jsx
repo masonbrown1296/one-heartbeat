@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import { useScrollAnimation } from '../hooks/useScrollAnimation'
-import { Brain, Dumbbell, Crown, MessageCircle, Target, Zap, Crosshair, CircleDot, Flame } from 'lucide-react'
+import { Brain, Dumbbell, Crown, MessageCircle, Target, Zap, Crosshair, CircleDot, Flame, Swords } from 'lucide-react'
 import PageHero from '../components/PageHero'
 import CTABanner from '../components/CTABanner'
 import SEO from '../components/shared/SEO'
@@ -16,10 +16,12 @@ const classroomTopics = [
 ]
 
 const onCourtTopics = [
-  { icon: <Zap size={28} />, title: 'Skill Development', desc: 'Position-specific drills and fundamental skill building led by elite coaches.' },
-  { icon: <Crosshair size={28} />, title: 'Explosiveness & Athleticism', desc: 'Speed, quickness, first-step explosiveness, and functional athleticism training.' },
-  { icon: <CircleDot size={28} />, title: 'Game Decision Making', desc: 'Reading the game, making quick decisions, and developing IQ that sets you apart.' },
-  { icon: <Flame size={28} />, title: 'Competitive Training', desc: 'Live game situations, controlled scrimmaging, and high-intensity competitive drills.' },
+  { icon: <Zap size={28} />, title: 'Finishing at the Rim', desc: 'Attacking the basket and converting at the highest rate against length and contact.' },
+  { icon: <Crosshair size={28} />, title: 'Reducing Turnovers', desc: 'Ball security, decision-making under pressure, and eliminating unforced errors.' },
+  { icon: <CircleDot size={28} />, title: 'Scoring Against Bigger Defenders', desc: 'Skill sets and shot selection for players competing against size and length disadvantages.' },
+  { icon: <Flame size={28} />, title: 'Handling Pressure', desc: 'Press-breaking concepts, ball-handling under pressure, and late-game composure.' },
+  { icon: <Target size={28} />, title: 'Read and React Offense', desc: 'Decision-making within motion offense principles — reading the defense and reacting with purpose.' },
+  { icon: <Swords size={28} />, title: 'Competitive Defensive Drills', desc: 'Man-to-man fundamentals, Buzz Defense principles, and high-intensity defensive training.' },
 ]
 
 export default function IndividualCamps() {
@@ -112,7 +114,7 @@ export default function IndividualCamps() {
             <h2 className="section-title section-title-light">Compete Harder. Train Smarter.</h2>
             <div className="orange-bar" />
             <p className="section-subtitle section-subtitle-light">
-              Skill work, athleticism, and competitive training led by coaches who have been in the game at the highest levels. Everything is designed to translate directly to game performance.
+              Basketball-specific skill work and competitive training. Athletes can choose the focus areas that match their game — sessions are tailored to where each player needs the most work.
             </p>
           </div>
           <div className="formats-grid">

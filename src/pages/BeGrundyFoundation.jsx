@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import { useScrollAnimation } from '../hooks/useScrollAnimation'
-import { HeartHandshake, Handshake, Megaphone, Shirt, Trophy, BookOpen, GraduationCap, Brain } from 'lucide-react'
+import { HeartHandshake, Handshake, Megaphone, Shirt } from 'lucide-react'
 import PageHero from '../components/PageHero'
 import SEO from '../components/shared/SEO'
 import './InnerPage.css'
@@ -10,13 +10,6 @@ const teamMembers = [
   { name: 'Tommy Brown', role: 'Co-Founder', bio: 'Former college head coach and founder of One Heartbeat Warriors. Tommy created the Be Grundy Foundation in honor of a mentor whose belief in him changed the trajectory of his life.' },
   { name: 'Andrea Campbell-Brown', role: 'Co-Founder', bio: 'Co-founded the Be Grundy Foundation with Tommy. Oversees foundation strategy, partnerships, and community development initiatives.' },
   { name: 'Coach D. Williams', role: 'Youth Development Lead', bio: 'Former college athlete turned educator with over 15 years of mentorship experience. Leads youth programming and on-the-ground impact.' },
-]
-
-const impactGoals = [
-  { value: '500+', label: 'Youth Served Annually' },
-  { value: '25+', label: 'Partner Schools' },
-  { value: '$250K', label: 'Scholarships Awarded' },
-  { value: '10+', label: 'Cities Reached' },
 ]
 
 const waysToSupport = [
@@ -29,7 +22,6 @@ const waysToSupport = [
 export default function BeGrundyFoundation() {
   const missionRef = useScrollAnimation()
   const storyRef = useScrollAnimation()
-  const impactRef = useScrollAnimation()
   const teamRef = useScrollAnimation()
   const supportRef = useScrollAnimation()
 
@@ -37,13 +29,13 @@ export default function BeGrundyFoundation() {
     <div>
       <SEO
         title="Be Grundy Foundation"
-        description="Empowering underserved youth through sports, mentorship, and life skills — giving every young person the tools and belief to write their own story."
+        description="Empowering underserved youth through mental toughness training, mentorship, and life skills — giving every young person the tools and belief to write their own story."
         path="/be-grundy-foundation"
       />
       <PageHero
         label="Community Impact"
         title={<>Be Grundy <span className="text-orange">Foundation</span></>}
-        subtitle="Empowering underserved youth through sports, mentorship, and life skills — giving every young person the tools and belief to write their own story."
+        subtitle="Empowering underserved youth through mental toughness training, mentorship, and life skills — giving every young person the tools and belief to write their own story."
         cta="Support the Foundation"
         ctaLink="/contact"
         secondaryCta="Learn Our Story"
@@ -88,40 +80,6 @@ export default function BeGrundyFoundation() {
         </div>
       </section>
 
-      {/* IMPACT */}
-      <section className="section section-light" ref={impactRef}>
-        <div className="container">
-          <div className="section-header section-header-center fade-up">
-            <span className="section-label">Our Impact</span>
-            <h2 className="section-title">Numbers That Matter</h2>
-            <div className="orange-bar orange-bar-center" />
-          </div>
-          <div className="impact-stats">
-            {impactGoals.map((g, i) => (
-              <div key={g.label} className={`impact-stat fade-up stagger-${i + 1}`} style={{ background: 'var(--white)', border: '1px solid var(--gray-200)' }}>
-                <div className="impact-stat-number" style={{ color: 'var(--orange-500)' }}>{g.value}</div>
-                <div className="impact-stat-label" style={{ color: 'var(--gray-500)' }}>{g.label}</div>
-              </div>
-            ))}
-          </div>
-          <div className="programs-impact-list fade-up mt-6">
-            {[
-              { icon: <Trophy size={24} />, title: 'Sports-Based Mentorship', desc: 'Using basketball and other sports as a vehicle for teaching discipline, leadership, and life skills to youth ages 8–18.' },
-              { icon: <BookOpen size={24} />, title: 'Academic Support', desc: "Tutoring, homework help, and college preparation programs that put every student on a path to academic success." },
-              { icon: <GraduationCap size={24} />, title: 'Scholarship Program', desc: 'Annual scholarships for graduating seniors who demonstrate leadership, character, and a commitment to community.' },
-              { icon: <Brain size={24} />, title: 'Life Skills Workshops', desc: 'Financial literacy, communication, goal-setting, and real-world readiness workshops for teens and young adults.' },
-            ].map((p, i) => (
-              <div key={p.title} className="impact-program-item">
-                <span className="impact-program-icon">{p.icon}</span>
-                <div>
-                  <h3 className="impact-program-title">{p.title}</h3>
-                  <p className="impact-program-desc">{p.desc}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* TEAM */}
       <section className="section section-white" ref={teamRef}>

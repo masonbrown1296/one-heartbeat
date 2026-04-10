@@ -76,11 +76,11 @@ export default function Contact() {
             <p style={{ color: 'var(--gray-600)', fontSize: '0.95rem', lineHeight: 1.7, marginBottom: '1.5rem' }}>
               The fastest way to get a quote on a Warrior Culture session. Call or text Tommy directly and he'll walk you through pricing, timing, and what to expect.
             </p>
-            <a href="tel:+15555550100" className="btn btn-primary btn-lg" style={{ display: 'block', marginBottom: '0.75rem' }}>
+            <a href="tel:+14232844614" className="btn btn-primary btn-lg" style={{ display: 'block', marginBottom: '0.75rem' }}>
               <Phone size={18} style={{ display: 'inline', verticalAlign: 'middle', marginRight: 8 }} />
               Call Tommy
             </a>
-            <a href="sms:+15555550100" className="btn btn-outline-orange btn-lg" style={{ display: 'block' }}>
+            <a href="sms:+14232844614" className="btn btn-outline-orange btn-lg" style={{ display: 'block' }}>
               <MessageSquare size={18} style={{ display: 'inline', verticalAlign: 'middle', marginRight: 8 }} />
               Text Tommy
             </a>
@@ -157,7 +157,7 @@ export default function Contact() {
                   <div>
                     <div className="contact-info-label">Email</div>
                     <div className="contact-info-value">
-                      <a href="mailto:info@oneheartbeatwarriors.com">info@oneheartbeatwarriors.com</a>
+                      <a href="mailto:tbrown@oneheartbeatwarriors.com">tbrown@oneheartbeatwarriors.com</a>
                     </div>
                   </div>
                 </div>
@@ -166,7 +166,7 @@ export default function Contact() {
                   <div>
                     <div className="contact-info-label">Call or Text</div>
                     <div className="contact-info-value">
-                      <a href="tel:+15555550100">(555) 555-0100</a>
+                      <a href="tel:+14232844614">423-284-4614</a>
                     </div>
                   </div>
                 </div>
