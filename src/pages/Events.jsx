@@ -70,6 +70,16 @@ export default function Events() {
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(false)
 
+  // Re-run fade-in after async data loads (IntersectionObserver fires once on mount
+  // and misses elements that render after the fetch completes)
+  useEffect(() => {
+    if (!loading && eventsRef.current) {
+      eventsRef.current.querySelectorAll('.fade-up, .fade-in').forEach(el => {
+        el.classList.add('visible')
+      })
+    }
+  }, [loading, eventsRef])
+
   useEffect(() => {
     const proxyUrl = `https://api.allorigins.win/get?url=${encodeURIComponent(SHEET_CSV_URL)}`
     fetch(proxyUrl)
