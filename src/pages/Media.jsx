@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import { useState, useEffect } from 'react'
 import { useScrollAnimation } from '../hooks/useScrollAnimation'
 import PageHero from '../components/PageHero'
 import CTABanner from '../components/CTABanner'
@@ -6,21 +6,16 @@ import SEO from '../components/shared/SEO'
 import './InnerPage.css'
 import './Media.css'
 
-const episodes = [
-  { ep: 'EP. 48', title: 'Building a Championship Culture From Scratch', guest: 'Coach Tommy Brown', duration: '52 min', date: 'Jan 2025' },
-  { ep: 'EP. 47', title: 'Mental Toughness is Not What You Think It Is', guest: 'Dr. James Carter', duration: '44 min', date: 'Dec 2024' },
-  { ep: 'EP. 46', title: 'The Leadership Habits That Separate Elite Teams', guest: 'Coach Williams', duration: '58 min', date: 'Dec 2024' },
-  { ep: 'EP. 45', title: 'Coaching Through Adversity — When the Season Falls Apart', guest: 'Coach Tommy Brown', duration: '41 min', date: 'Nov 2024' },
-  { ep: 'EP. 44', title: 'How to Build Confidence That Actually Holds Up', guest: 'Dr. Sarah Miles', duration: '47 min', date: 'Nov 2024' },
-  { ep: 'EP. 43', title: 'What Great Captains Do Differently', guest: 'Marcus T.', duration: '39 min', date: 'Oct 2024' },
-]
+// ─────────────────────────────────────────────────────────────
+// YOUTUBE CHANNEL ID
+// To activate the YouTube video feed, replace the empty string
+// below with your channel ID (format: UCxxxxxxxxxxxxxxxxxx).
+// Find it in YouTube Studio → Settings → Channel → Advanced settings.
+// ─────────────────────────────────────────────────────────────
+const YOUTUBE_CHANNEL_ID = ''
+const YOUTUBE_HANDLE = '@Oneheartbeatwarriors'
 
-const videos = [
-  { title: 'Warrior Culture Full Keynote', desc: 'Coach Tommy delivers the full Warrior Culture keynote at the National Coaches Summit.', duration: '45:22', type: 'Keynote' },
-  { title: 'Mental Toughness Training Session', desc: 'Behind the scenes of a live team mental performance training session.', duration: '18:07', type: 'Training' },
-  { title: 'Be Grundy Foundation Launch', desc: 'The emotional story behind the foundation and what it means to Tommy.', duration: '8:45', type: 'Foundation' },
-  { title: 'Interview: Building Champions', desc: 'Coach Tommy sits down with ESPN Radio to discuss what it takes to build a champion.', duration: '22:30', type: 'Interview' },
-]
+const SPOTIFY_SHOW_ID = '7xD2nQ7LFirN0Qj8J3TQah'
 
 export default function Media() {
   const podcastRef = useScrollAnimation()
@@ -48,48 +43,25 @@ export default function Media() {
             <h2 className="section-title">One Heartbeat Warriors Podcast</h2>
             <div className="orange-bar" />
             <p className="section-subtitle">
-              Real conversations with elite coaches, athletes, and performance experts on mental toughness, leadership, and what it takes to be a Warrior.
+              Real conversations on mental toughness, leadership, and what it takes to
+              build a Warrior mindset — on the field and beyond.
             </p>
           </div>
-          <div className="podcast-player-featured fade-up stagger-1">
-            <div className="podcast-featured-thumb" style={{ background: 'linear-gradient(135deg, var(--navy-900) 0%, var(--orange-500) 100%)', display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: '0.75rem', color: '#fff', fontWeight: 800, fontSize: '1.2rem', textAlign: 'center', padding: '1.5rem' }}>
-              One Heartbeat Warriors Podcast
-            </div>
-            <div className="podcast-featured-info">
-              <span className="section-label">Latest Episode</span>
-              <h3 className="podcast-featured-title">Building a Championship Culture From Scratch</h3>
-              <p className="podcast-featured-desc">
-                Coach Tommy goes deep on the exact process he uses to build Warrior Culture in new programs — from day one culture assessments to full program transformation.
-              </p>
-              <div className="podcast-platforms">
-                <span className="podcast-platform-label">Listen on:</span>
-                <div className="podcast-platform-links">
-                  {['Spotify', 'Apple Podcasts', 'YouTube'].map(p => (
-                    <a key={p} href="#" className="podcast-platform-btn">{p}</a>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
-          <h3 className="episodes-heading fade-up mt-6">Recent Episodes</h3>
-          <div className="podcast-grid">
-            {episodes.map((e, i) => (
-              <div key={e.ep} className={`podcast-card fade-up stagger-${(i % 2) + 1}`}>
-                <div className="podcast-thumb" style={{ background: 'var(--navy-800)', display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: '0.5rem', color: 'var(--orange-500)', fontWeight: 700, fontSize: '0.9rem', minWidth: 60 }}>
-                  {e.ep.replace('EP. ', '#')}
-                </div>
-                <div>
-                  <div className="podcast-ep">{e.ep}</div>
-                  <div className="podcast-title">{e.title}</div>
-                  <div className="podcast-meta">{e.guest} · {e.duration} · {e.date}</div>
-                </div>
-              </div>
-            ))}
+          <div className="spotify-embed-wrap fade-up stagger-1">
+            <iframe
+              src={`https://open.spotify.com/embed/show/${SPOTIFY_SHOW_ID}?utm_source=generator&theme=0`}
+              width="100%"
+              height="352"
+              frameBorder="0"
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+              loading="lazy"
+              title="One Heartbeat Warriors Podcast on Spotify"
+            />
           </div>
         </div>
       </section>
 
-      {/* VIDEOS */}
+      {/* YOUTUBE VIDEOS */}
       <section className="section section-light" ref={videoRef}>
         <div className="container">
           <div className="section-header fade-up">
@@ -97,23 +69,7 @@ export default function Media() {
             <h2 className="section-title">Watch & Learn</h2>
             <div className="orange-bar" />
           </div>
-          <div className="video-grid fade-up stagger-2">
-            {videos.map(v => (
-              <div key={v.title} className="video-card">
-                <div className="video-thumb" style={{ background: 'linear-gradient(135deg, var(--navy-900) 0%, var(--gray-800) 100%)', position: 'relative' }}>
-                  <button className="play-btn" aria-label={`Play ${v.title}`}>
-                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
-                  </button>
-                  <div className="video-duration">{v.duration}</div>
-                  <div className="video-type-tag">{v.type}</div>
-                </div>
-                <div className="video-info">
-                  <h3 className="video-title">{v.title}</h3>
-                  <p className="video-desc">{v.desc}</p>
-                </div>
-              </div>
-            ))}
-          </div>
+          <YoutubeSection />
         </div>
       </section>
 
@@ -137,11 +93,18 @@ export default function Media() {
               '/ohb-images/IMG_3084.jpg',
               '/ohb-images/IMG_2740.jpg',
             ].map((src, i) => (
-              <div key={i} className={`gallery-item ${i === 0 ? 'gallery-featured' : ''}`} style={{ overflow: 'hidden', borderRadius: '0.75rem' }}>
-                <img src={src} alt={`One Heartbeat Warriors gallery photo ${i + 1}`} loading="lazy" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
-                <div className="gallery-overlay">
-                  <span>View</span>
-                </div>
+              <div
+                key={i}
+                className={`gallery-item ${i === 0 ? 'gallery-featured' : ''}`}
+                style={{ overflow: 'hidden', borderRadius: '0.75rem' }}
+              >
+                <img
+                  src={src}
+                  alt={`One Heartbeat Warriors gallery photo ${i + 1}`}
+                  loading="lazy"
+                  style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+                />
+                <div className="gallery-overlay"><span>View</span></div>
               </div>
             ))}
           </div>
@@ -156,6 +119,128 @@ export default function Media() {
         secondaryCta="Book Tommy"
         secondaryCtaLink="/contact"
       />
+    </div>
+  )
+}
+
+// ── YouTube RSS via allorigins CORS proxy ──────────────────────
+function YoutubeSection() {
+  const [videos, setVideos] = useState([])
+  const [loading, setLoading] = useState(true)
+  const [error, setError] = useState(false)
+
+  useEffect(() => {
+    if (!YOUTUBE_CHANNEL_ID) { setLoading(false); return }
+
+    const rssUrl = `https://www.youtube.com/feeds/videos.xml?channel_id=${YOUTUBE_CHANNEL_ID}`
+    const proxyUrl = `https://api.allorigins.win/get?url=${encodeURIComponent(rssUrl)}`
+
+    fetch(proxyUrl)
+      .then(r => { if (!r.ok) throw new Error(); return r.json() })
+      .then(data => {
+        const parser = new DOMParser()
+        const xml = parser.parseFromString(data.contents, 'text/xml')
+        const entries = Array.from(xml.querySelectorAll('entry')).slice(0, 6)
+        const parsed = entries.map(entry => {
+          const videoId = entry.querySelector('videoId')?.textContent
+          const title = entry.querySelector('title')?.textContent || ''
+          const published = entry.querySelector('published')?.textContent || ''
+          const link = entry.querySelector('link')?.getAttribute('href') || `https://youtu.be/${videoId}`
+          const thumb = entry.querySelector('thumbnail')?.getAttribute('url')
+            || (videoId ? `https://i.ytimg.com/vi/${videoId}/hqdefault.jpg` : null)
+          const description = entry.querySelector('description')?.textContent || ''
+          return { videoId, title, published, link, thumb, description }
+        })
+        setVideos(parsed)
+        setLoading(false)
+      })
+      .catch(() => { setError(true); setLoading(false) })
+  }, [])
+
+  // No channel ID configured yet — show subscribe prompt
+  if (!YOUTUBE_CHANNEL_ID) {
+    return (
+      <div className="yt-stub fade-up stagger-1">
+        <div className="yt-stub-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="40" height="40">
+            <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+          </svg>
+        </div>
+        <h3 className="yt-stub-title">Watch on YouTube</h3>
+        <p className="yt-stub-body">
+          Training sessions, keynotes, behind-the-scenes footage, and more from
+          Coach Tommy Brown and One Heartbeat Warriors.
+        </p>
+        <a
+          href={`https://www.youtube.com/${YOUTUBE_HANDLE}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="btn btn-primary btn-md"
+        >
+          Subscribe on YouTube
+        </a>
+      </div>
+    )
+  }
+
+  if (loading) {
+    return (
+      <div className="yt-stub fade-up stagger-1">
+        <p style={{ color: 'var(--gray-500)' }}>Loading videos…</p>
+      </div>
+    )
+  }
+
+  if (error || videos.length === 0) {
+    return (
+      <div className="yt-stub fade-up stagger-1">
+        <h3 className="yt-stub-title">Watch on YouTube</h3>
+        <a
+          href={`https://www.youtube.com/${YOUTUBE_HANDLE}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="btn btn-primary btn-md"
+        >
+          Visit Our Channel
+        </a>
+      </div>
+    )
+  }
+
+  return (
+    <div className="video-grid fade-up stagger-2">
+      {videos.map(v => (
+        <a
+          key={v.videoId}
+          href={v.link}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="video-card"
+          style={{ textDecoration: 'none' }}
+        >
+          <div className="video-thumb" style={{ background: 'var(--navy-900)', position: 'relative' }}>
+            {v.thumb && (
+              <img
+                src={v.thumb}
+                alt={v.title}
+                loading="lazy"
+                style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+              />
+            )}
+            <div className="play-btn" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z" /></svg>
+            </div>
+          </div>
+          <div className="video-info">
+            <h3 className="video-title">{v.title}</h3>
+            {v.published && (
+              <p className="video-desc" style={{ fontSize: '0.8rem', color: 'var(--gray-400)', margin: 0 }}>
+                {new Date(v.published).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+              </p>
+            )}
+          </div>
+        </a>
+      ))}
     </div>
   )
 }

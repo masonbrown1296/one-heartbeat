@@ -2,6 +2,13 @@
    EVENTS PAGE
    ============================================================ */
 
+@keyframes events-spin {
+  to { transform: rotate(360deg); }
+}
+.events-spinner {
+  animation: events-spin 0.9s linear infinite;
+}
+
 /* Empty state */
 .events-empty {
   text-align: center;

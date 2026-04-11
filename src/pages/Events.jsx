@@ -1,6 +1,7 @@
+import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { useScrollAnimation } from '../hooks/useScrollAnimation'
-import { Calendar, MapPin, Tag } from 'lucide-react'
+import { Calendar, MapPin, Tag, Loader2 } from 'lucide-react'
 import PageHero from '../components/PageHero'
 import CTABanner from '../components/CTABanner'
 import SEO from '../components/shared/SEO'
@@ -8,31 +9,22 @@ import './InnerPage.css'
 import './Events.css'
 
 // ─────────────────────────────────────────────────────────────
-// ADD EVENTS HERE
-// Each event needs:
-//   title       — name of the event
-//   date        — display string, e.g. 'June 14, 2025'
-//   dateISO     — machine-readable, e.g. '2025-06-14' (used for sorting)
-//   location    — city/state or 'Virtual'
-//   type        — 'Warrior Culture Session' | 'Athletic Dept Clinic' |
-//                 'Wellness Clinic' | 'Keynote' | 'Camp' | 'Other'
-//   description — one or two sentences about the event
-//   link        — URL for tickets/info, or null if none
-//   linkLabel   — button text if link is set, e.g. 'Register' or 'Learn More'
+// GOOGLE SHEETS CSV INTEGRATION
+// Tommy manages events in this Google Sheet (no login needed).
+//
+// Required column headers (exact, case-insensitive):
+//   title       — event name
+//   date        — display string, e.g. "June 14, 2025"
+//   dateISO     — YYYY-MM-DD, e.g. "2025-06-14" (sorting/filtering)
+//   location    — city/state or "Virtual"
+//   type        — Warrior Culture Session | Athletic Dept Clinic |
+//                 Wellness Clinic | Keynote | Camp | Other
+//   description — 1–2 sentences about the event
+//   link        — full URL for tickets/info (leave blank if none)
+//   linkLabel   — button text, e.g. "Register" (default: "Learn More")
 // ─────────────────────────────────────────────────────────────
-const events = [
-  // Example (delete or replace):
-  // {
-  //   title: 'Warrior Culture Team Session — Riverside High School',
-  //   date: 'June 14, 2025',
-  //   dateISO: '2025-06-14',
-  //   location: 'Chattanooga, TN',
-  //   type: 'Warrior Culture Session',
-  //   description: 'A full Warrior Culture session for the Riverside boys basketball program covering mental toughness, the 10 Qualities of a Warrior, and confidence training.',
-  //   link: null,
-  //   linkLabel: 'Learn More',
-  // },
-]
+const SHEET_CSV_URL =
+  'https://docs.google.com/spreadsheets/d/e/2PACX-1vRa6p7j55yMwdCGes8zTQKco1f692Gmzvtve6gizaJJ4yEcsrWcE2fCu5N_V6Yb1y7CE5X2EJPHTRii/pub?output=csv'
 
 const typeColors = {
   'Warrior Culture Session': 'var(--orange-500)',
@@ -43,16 +35,70 @@ const typeColors = {
   'Other': 'var(--gray-500)',
 }
 
+// ── Robust CSV parser (handles quoted fields with commas) ──────
+function parseCSV(text) {
+  const lines = text.trim().split('\n')
+  if (lines.length < 2) return []
+
+  const headers = parseLine(lines[0]).map(h => h.toLowerCase().replace(/\s+/g, ''))
+
+  return lines.slice(1).map(line => {
+    const values = parseLine(line)
+    const row = {}
+    headers.forEach((h, i) => { row[h] = (values[i] || '').trim() })
+    return row
+  }).filter(r => r.title && r.dateiso)
+}
+
+function parseLine(line) {
+  const values = []
+  let current = ''
+  let inQuotes = false
+  for (let i = 0; i < line.length; i++) {
+    const ch = line[i]
+    if (ch === '"') { inQuotes = !inQuotes; continue }
+    if (ch === ',' && !inQuotes) { values.push(current); current = ''; continue }
+    current += ch
+  }
+  values.push(current)
+  return values.map(v => v.trim())
+}
+
 export default function Events() {
   const eventsRef = useScrollAnimation()
+  const [events, setEvents] = useState([])
+  const [loading, setLoading] = useState(true)
+  const [error, setError] = useState(false)
 
+  useEffect(() => {
+    fetch(SHEET_CSV_URL)
+      .then(r => { if (!r.ok) throw new Error('Failed to load'); return r.text() })
+      .then(text => {
+        const rows = parseCSV(text)
+        setEvents(rows.map(r => ({
+          title: r.title,
+          date: r.date,
+          dateISO: r.dateiso,
+          location: r.location || '',
+          type: r.type || 'Other',
+          description: r.description || '',
+          link: r.link || null,
+          linkLabel: r.linklabel || 'Learn More',
+        })))
+        setLoading(false)
+      })
+      .catch(() => { setError(true); setLoading(false) })
+  }, [])
+
+  const today = new Date(new Date().toDateString())
   const upcoming = events
-    .filter(e => new Date(e.dateISO) >= new Date(new Date().toDateString()))
+    .filter(e => new Date(e.dateISO) >= today)
     .sort((a, b) => new Date(a.dateISO) - new Date(b.dateISO))
-
   const past = events
-    .filter(e => new Date(e.dateISO) < new Date(new Date().toDateString()))
+    .filter(e => new Date(e.dateISO) < today)
     .sort((a, b) => new Date(b.dateISO) - new Date(a.dateISO))
+
+  const isEmpty = !loading && !error && upcoming.length === 0 && past.length === 0
 
   return (
     <div>
@@ -69,18 +115,35 @@ export default function Events() {
 
       <section className="section section-white" ref={eventsRef}>
         <div className="container">
-          {upcoming.length === 0 && past.length === 0 ? (
+
+          {/* Loading */}
+          {loading && (
+            <div className="events-empty fade-up">
+              <div className="events-empty-icon">
+                <Loader2 size={40} className="events-spinner" />
+              </div>
+              <p className="events-empty-body">Loading events…</p>
+            </div>
+          )}
+
+          {/* Error or empty */}
+          {(error || isEmpty) && (
             <div className="events-empty fade-up">
               <div className="events-empty-icon">
                 <Calendar size={48} />
               </div>
               <h2 className="events-empty-title">Events Coming Soon</h2>
               <p className="events-empty-body">
-                Tommy's schedule fills up fast. Check back here for upcoming sessions, clinics, and speaking dates — or get on the list and we'll reach out when something's in your area.
+                Tommy's schedule fills up fast. Check back here for upcoming sessions,
+                clinics, and speaking dates — or get on the list and we'll reach out
+                when something's in your area.
               </p>
               <Link to="/contact" className="btn btn-primary btn-lg mt-4">Get on the List</Link>
             </div>
-          ) : (
+          )}
+
+          {/* Events */}
+          {!loading && !error && (upcoming.length > 0 || past.length > 0) && (
             <>
               {upcoming.length > 0 && (
                 <>
@@ -113,6 +176,7 @@ export default function Events() {
               )}
             </>
           )}
+
         </div>
       </section>
 
@@ -130,28 +194,38 @@ export default function Events() {
 
 function EventCard({ event, index, past = false }) {
   const color = typeColors[event.type] || typeColors['Other']
+  const dateObj = new Date(event.dateISO + 'T12:00:00')
+
   return (
     <div className={`event-card fade-up stagger-${(index % 3) + 1}${past ? ' event-card--past' : ''}`}>
       <div className="event-card-date-col">
         <div className="event-date-block" style={{ borderColor: past ? 'var(--gray-300)' : color }}>
           <span className="event-date-month" style={{ color: past ? 'var(--gray-400)' : color }}>
-            {new Date(event.dateISO + 'T12:00:00').toLocaleDateString('en-US', { month: 'short' }).toUpperCase()}
+            {dateObj.toLocaleDateString('en-US', { month: 'short' }).toUpperCase()}
           </span>
           <span className="event-date-day" style={{ color: past ? 'var(--gray-400)' : 'var(--navy-900)' }}>
-            {new Date(event.dateISO + 'T12:00:00').getDate()}
+            {dateObj.getDate()}
           </span>
           <span className="event-date-year" style={{ color: 'var(--gray-400)' }}>
-            {new Date(event.dateISO + 'T12:00:00').getFullYear()}
+            {dateObj.getFullYear()}
           </span>
         </div>
       </div>
 
       <div className="event-card-body">
-        <div className="event-type-badge" style={{ background: past ? 'var(--gray-100)' : `${color}18`, color: past ? 'var(--gray-400)' : color }}>
+        <div
+          className="event-type-badge"
+          style={{
+            background: past ? 'var(--gray-100)' : `${color}18`,
+            color: past ? 'var(--gray-400)' : color,
+          }}
+        >
           <Tag size={11} />
           {event.type}
         </div>
-        <h3 className="event-title" style={{ color: past ? 'var(--gray-500)' : 'var(--navy-800)' }}>{event.title}</h3>
+        <h3 className="event-title" style={{ color: past ? 'var(--gray-500)' : 'var(--navy-800)' }}>
+          {event.title}
+        </h3>
         <div className="event-meta">
           <span className="event-location">
             <MapPin size={14} />

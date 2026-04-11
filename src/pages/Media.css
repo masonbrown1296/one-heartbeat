@@ -1,3 +1,55 @@
+/* SPOTIFY EMBED */
+.spotify-embed-wrap {
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.spotify-embed-wrap iframe {
+  display: block;
+  border-radius: var(--radius-xl);
+}
+
+/* YOUTUBE STUB */
+.yt-stub {
+  text-align: center;
+  padding: 3rem 1rem;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.yt-stub-icon {
+  width: 5rem;
+  height: 5rem;
+  background: #ff0000;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  margin: 0 auto 1.5rem;
+}
+
+.yt-stub-title {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--navy-800);
+  margin-bottom: 0.75rem;
+}
+
+.yt-stub-body {
+  font-size: 0.95rem;
+  color: var(--gray-600);
+  line-height: 1.75;
+  margin-bottom: 1.75rem;
+}
+
+/* ── Legacy styles (kept for video grid reuse) ── */
 .podcast-player-featured {
   display: grid;
   gap: 2rem;
