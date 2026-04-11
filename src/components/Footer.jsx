@@ -10,6 +10,7 @@ const footerLinks = {
   ],
   Company: [
     { to: '/about', label: 'About Tommy' },
+    { to: '/books', label: 'Books' },
     { to: '/events', label: 'Events' },
     { to: '/media', label: 'Media & Podcast' },
     { to: '/blog', label: 'Blog' },

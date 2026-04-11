@@ -8,6 +8,7 @@ const navLinks = [
   { to: '/mindset-training', label: 'Mindset' },
   { to: '/be-grundy-foundation', label: 'Be Grundy' },
   { to: '/about', label: 'About Tommy' },
+  { to: '/books', label: 'Books' },
   { to: '/events', label: 'Events' },
   { to: '/media', label: 'Media' },
   { to: '/blog', label: 'Blog' },
