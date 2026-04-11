@@ -71,10 +71,11 @@ export default function Events() {
   const [error, setError] = useState(false)
 
   useEffect(() => {
-    fetch(SHEET_CSV_URL)
-      .then(r => { if (!r.ok) throw new Error('Failed to load'); return r.text() })
-      .then(text => {
-        const rows = parseCSV(text)
+    const proxyUrl = `https://api.allorigins.win/get?url=${encodeURIComponent(SHEET_CSV_URL)}`
+    fetch(proxyUrl)
+      .then(r => { if (!r.ok) throw new Error('Failed to load'); return r.json() })
+      .then(data => {
+        const rows = parseCSV(data.contents)
         setEvents(rows.map(r => ({
           title: r.title,
           date: r.date,
