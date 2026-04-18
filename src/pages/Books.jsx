@@ -10,6 +10,30 @@ import './Books.css'
 
 const books = [
   {
+    asin: '9798253088852',
+    title: 'The New Recruiting Reality',
+    subtitle: "An Insider's Guide for Navigating Today's College Basketball Recruiting Process",
+    date: 'April 13, 2026',
+    format: 'Paperback',
+    isbn: '979-8253088852',
+    rating: null,
+    reviewCount: null,
+    amazonUrl: 'https://www.amazon.com/dp/9798253088852',
+    description: `College basketball recruiting has changed — dramatically. What worked five years ago no longer works today.
+
+With the transfer portal, older players staying in college longer, and coaches under pressure to win immediately, the recruiting landscape has shifted in ways most families don't fully understand. And that misunderstanding is costing players opportunities.
+
+In this honest, straightforward guide, longtime college coach Tommy Brown pulls back the curtain on what recruiting actually looks like today — from a coach's perspective. This book isn't built on hype, promises, or outdated advice. It's built on reality.`,
+    bullets: [
+      'Why high school players now compete against 21–23-year-old college athletes',
+      'How the transfer portal has completely reshaped roster building',
+      'What coaches are really looking for — and what they\'re not',
+      'The biggest mistakes players and parents make in the recruiting process',
+    ],
+    tag: 'Just Released',
+    tagColor: '#b45309',
+  },
+  {
     asin: 'B0DZP2H4NP',
     title: 'Grundy & Sadie',
     subtitle: 'Unleashing the Power of Grit and Empathy in Life and Leadership',
@@ -109,12 +133,13 @@ function BookCover({ book }) {
 export default function Books() {
   const book1Ref = useScrollAnimation()
   const book2Ref = useScrollAnimation()
+  const book3Ref = useScrollAnimation()
 
   return (
     <div>
       <SEO
         title="Books by Tommy Brown"
-        description="Two books by coach and speaker Tommy Brown — The 10 Qualities of a Warrior and Grundy & Sadie. Mental toughness, grit, empathy, and leadership."
+        description="Books by coach and speaker Tommy Brown — The New Recruiting Reality, Grundy &amp; Sadie, and The 10 Qualities of a Warrior. Mental toughness, grit, leadership, and recruiting."
         path="/books"
       />
       <PageHero
@@ -127,7 +152,7 @@ export default function Books() {
         <section
           key={book.asin}
           className={`section ${idx % 2 === 0 ? 'section-white' : 'section-light'}`}
-          ref={idx === 0 ? book1Ref : book2Ref}
+          ref={idx === 0 ? book1Ref : idx === 1 ? book2Ref : book3Ref}
         >
           <div className="container">
             <div className={`book-layout fade-up${idx % 2 !== 0 ? ' book-layout--reverse' : ''}`}>
@@ -143,7 +168,7 @@ export default function Books() {
                 </div>
                 <h2 className="book-title">{book.title}</h2>
                 <p className="book-subtitle">{book.subtitle}</p>
-                <StarRating rating={book.rating} count={book.reviewCount} />
+                {book.rating && <StarRating rating={book.rating} count={book.reviewCount} />}
                 <div className="orange-bar" style={{ margin: '1.25rem 0' }} />
                 {book.description.split('\n\n').map((para, i) => (
                   <p key={i} className="inner-body" style={{ marginBottom: '0.875rem' }}>{para}</p>
