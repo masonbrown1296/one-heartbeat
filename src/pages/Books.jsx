@@ -10,7 +10,7 @@ import './Books.css'
 
 const books = [
   {
-    asin: '9798253088852',
+    asin: 'B0GWJ7XZYL',
     title: 'The New Recruiting Reality',
     subtitle: "An Insider's Guide for Navigating Today's College Basketball Recruiting Process",
     date: 'April 13, 2026',
@@ -18,7 +18,7 @@ const books = [
     isbn: '979-8253088852',
     rating: null,
     reviewCount: null,
-    amazonUrl: 'https://www.amazon.com/dp/9798253088852',
+    amazonUrl: 'https://www.amazon.com/dp/B0GWJ7XZYL',
     description: `College basketball recruiting has changed — dramatically. What worked five years ago no longer works today.
 
 With the transfer portal, older players staying in college longer, and coaches under pressure to win immediately, the recruiting landscape has shifted in ways most families don't fully understand. And that misunderstanding is costing players opportunities.
