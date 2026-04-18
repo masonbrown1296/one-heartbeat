@@ -2,7 +2,7 @@ import { Helmet } from 'react-helmet-async'
 
 const SITE_URL = 'https://oneheartbeatwarriors.com'
 const SITE_NAME = 'One Heartbeat Warriors'
-const DEFAULT_IMAGE = `${SITE_URL}/priority-images/IMG_1952.jpg`
+const DEFAULT_IMAGE = `${SITE_URL}/og-image.png`
 
 export default function SEO({ title, description, path = '', image }) {
   const fullTitle = title ? `${title} | ${SITE_NAME}` : `${SITE_NAME} | Mental Performance & Leadership Training`

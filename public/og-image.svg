@@ -1,0 +1,82 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="swordGrad" x1="80.5" y1="407.256" x2="80.5" y2="158.256" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F5782B"/>
+      <stop offset="1" stop-color="#FF4700"/>
+    </linearGradient>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1200" y2="630" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0D1728"/>
+      <stop offset="1" stop-color="#162040"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bgGrad)"/>
+
+  <!-- Subtle diagonal texture lines -->
+  <line x1="-100" y1="630" x2="530" y2="0" stroke="white" stroke-opacity="0.03" stroke-width="120"/>
+  <line x1="200" y1="630" x2="830" y2="0" stroke="white" stroke-opacity="0.03" stroke-width="120"/>
+  <line x1="500" y1="630" x2="1130" y2="0" stroke="white" stroke-opacity="0.03" stroke-width="120"/>
+
+  <!-- OHB Symbol — large watermark right side -->
+  <g opacity="0.09" transform="translate(960, 55) scale(1.2)">
+    <path d="M38 146V115.017H55.765V41.593H38V13.7936C44.0627 13.7936 50.6893 12.6618 57.8799 10.3982C65.0705 8.13469 72.1201 4.6686 79.0287 0H101.235V115.017H119V146H38Z" fill="white"/>
+    <path d="M110.5 150.756V368.747C110.5 375.739 108.245 382.545 104.07 388.154L86.5166 411.735L80.5 419.817L74.4834 411.735L56.9297 388.154C52.7547 382.545 50.5 375.739 50.5 368.747V150.756H110.5Z" fill="#F5782B" stroke="#0D1728" stroke-width="12"/>
+    <path d="M0 133H161V145.5V158H0V145.5V133Z" fill="white"/>
+    <rect x="75" y="154" width="8" height="141" fill="white"/>
+  </g>
+
+  <!-- Left orange accent bar -->
+  <rect x="0" y="0" width="8" height="630" fill="#F5782B"/>
+
+  <!-- Bottom accent bar -->
+  <rect x="0" y="614" width="1200" height="16" fill="#F5782B" opacity="0.5"/>
+
+  <!-- ONE HEARTBEAT -->
+  <text
+    x="80" y="230"
+    font-family="Impact, 'Arial Narrow', 'Helvetica Neue', Arial, sans-serif"
+    font-size="104"
+    font-weight="900"
+    letter-spacing="5"
+    fill="white">ONE HEARTBEAT</text>
+
+  <!-- WARRIORS -->
+  <text
+    x="78" y="358"
+    font-family="Impact, 'Arial Narrow', 'Helvetica Neue', Arial, sans-serif"
+    font-size="136"
+    font-weight="900"
+    letter-spacing="8"
+    fill="#F5782B">WARRIORS</text>
+
+  <!-- Orange divider -->
+  <rect x="80" y="382" width="440" height="5" fill="#F5782B"/>
+
+  <!-- Tagline -->
+  <text
+    x="80" y="432"
+    font-family="Arial, 'Helvetica Neue', Helvetica, sans-serif"
+    font-size="25"
+    font-weight="400"
+    letter-spacing="2.5"
+    fill="white" fill-opacity="0.6">Mental Toughness  ·  Leadership  ·  Warrior Culture</text>
+
+  <!-- Tommy Brown credit -->
+  <text
+    x="80" y="575"
+    font-family="Arial, 'Helvetica Neue', Helvetica, sans-serif"
+    font-size="20"
+    font-weight="700"
+    letter-spacing="3"
+    fill="white" fill-opacity="0.4">TOMMY BROWN  ·  COACH  ·  SPEAKER  ·  AUTHOR</text>
+
+  <!-- Domain -->
+  <text
+    x="80" y="600"
+    font-family="Arial, 'Helvetica Neue', Helvetica, sans-serif"
+    font-size="17"
+    font-weight="400"
+    letter-spacing="1"
+    fill="white" fill-opacity="0.25">oneheartbeatwarriors.com</text>
+</svg>
