@@ -22,6 +22,8 @@ export default function Contact() {
     name: '', email: '', phone: '', organization: '', inquiry: '', message: '',
   })
   const [submitted, setSubmitted] = useState(false)
+  const [submitting, setSubmitting] = useState(false)
+  const [submitError, setSubmitError] = useState(false)
   const [showCallPopup, setShowCallPopup] = useState(false)
   const formRef = useScrollAnimation()
 
@@ -29,9 +31,26 @@ export default function Contact() {
     setFormData(prev => ({ ...prev, [e.target.name]: e.target.value }))
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
-    setSubmitted(true)
+    setSubmitting(true)
+    setSubmitError(false)
+    try {
+      const res = await fetch('https://formspree.io/f/xpqkrryv', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify(formData),
+      })
+      if (res.ok) {
+        setSubmitted(true)
+      } else {
+        setSubmitError(true)
+      }
+    } catch {
+      setSubmitError(true)
+    } finally {
+      setSubmitting(false)
+    }
   }
 
   return (
@@ -140,8 +159,13 @@ export default function Contact() {
                   <textarea id="message" name="message" className="form-textarea" placeholder="Number of teams, timing, questions about pricing, etc." value={formData.message} onChange={handleChange} style={{ minHeight: 100 }} />
                 </div>
 
-                <button type="submit" className="btn btn-primary btn-lg form-submit">
-                  Send Message
+                {submitError && (
+                  <p style={{ color: '#c0392b', fontSize: '0.9rem', marginBottom: '0.75rem' }}>
+                    Something went wrong. Please try again or text Tommy directly at 423-284-4614.
+                  </p>
+                )}
+                <button type="submit" className="btn btn-primary btn-lg form-submit" disabled={submitting}>
+                  {submitting ? 'Sending…' : 'Send Message'}
                 </button>
               </form>
             )}

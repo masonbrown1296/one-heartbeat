@@ -1,6 +1,6 @@
 import { Helmet } from 'react-helmet-async'
 
-const SITE_URL = 'https://one-heartbeat.vercel.app'
+const SITE_URL = 'https://oneheartbeatwarriors.com'
 const SITE_NAME = 'One Heartbeat Warriors'
 const DEFAULT_IMAGE = `${SITE_URL}/priority-images/IMG_1952.jpg`
 
