@@ -1,10 +1,15 @@
 import { useState } from 'react'
+import emailjs from '@emailjs/browser'
 import { useScrollAnimation } from '../hooks/useScrollAnimation'
 import { Mail, Phone, MapPin, Clock, MessageSquare } from 'lucide-react'
 import PageHero from '../components/PageHero'
 import SEO from '../components/shared/SEO'
 import './InnerPage.css'
 import './Contact.css'
+
+const EMAILJS_SERVICE_ID = 'service_xz59269'
+const EMAILJS_TEMPLATE_ID = 'template_ctei6tj'
+const EMAILJS_PUBLIC_KEY = '995WCwa1J0sT1-AjY'
 
 const inquiryTypes = [
   'Warrior Culture Team Session',
@@ -36,17 +41,22 @@ export default function Contact() {
     setSubmitting(true)
     setSubmitError(false)
     try {
-      const res = await fetch('https://formspree.io/f/xpqkrryv', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-        body: JSON.stringify(formData),
-      })
-      if (res.ok) {
-        setSubmitted(true)
-      } else {
-        setSubmitError(true)
-      }
-    } catch {
+      await emailjs.send(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        {
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone || '—',
+          organization: formData.organization || '—',
+          inquiry: formData.inquiry,
+          message: formData.message || '—',
+        },
+        { publicKey: EMAILJS_PUBLIC_KEY }
+      )
+      setSubmitted(true)
+    } catch (err) {
+      console.error('EmailJS error:', err)
       setSubmitError(true)
     } finally {
       setSubmitting(false)
