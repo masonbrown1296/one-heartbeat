@@ -7,6 +7,7 @@ category: "Mental Toughness"
 tags: ["mental toughness", "book review", "mindset"]
 readTime: "5 min read"
 featured: false
+image: "/og-13-things-mentally-tough-people-dont-do.png"
 ---
 
 Amy Morin's powerful framework gives us a clear blueprint for building mental strength. Here are the 13 things mentally tough people refuse to do:

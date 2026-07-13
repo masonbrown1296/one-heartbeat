@@ -7,6 +7,7 @@ category: "Leadership"
 tags: ["leadership", "accountability", "warrior culture"]
 readTime: "7 min read"
 featured: false
+image: "/og-embrace-personal-responsibility.png"
 ---
 
 > "The warrior does not seek blame for the world's problems, but neither does he succumb to them. He takes responsibility for his own life and for the world around him." – Steven Pressfield

@@ -1,7 +1,7 @@
 <svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
   
   <defs>
-    <radialGradient id="bgGlow" cx="85%" cy="50%" r="75%">
+    <radialGradient id="bgGlow" cx="18%" cy="50%" r="75%">
       <stop offset="0%" stop-color="#1a2a52" stop-opacity="0.7"/>
       <stop offset="100%" stop-color="#0a1220" stop-opacity="0"/>
     </radialGradient>
@@ -15,21 +15,20 @@
   <rect width="1200" height="630" fill="#0A1220"/>
   <rect width="1200" height="630" fill="url(#bgGlow)"/>
   
-  <g transform="translate(940, 85) scale(1.06)" opacity="1">
+  <g transform="translate(905, 150) scale(1.15)" opacity="0.13">
     <path d="M38 146V115.017H55.765V41.593H38V13.7936C44.0627 13.7936 50.6893 12.6618 57.8799 10.3982C65.0705 8.13469 72.1201 4.6686 79.0287 0H101.235V115.017H119V146H38Z" fill="#FFFFFF"/>
     <path d="M110.5 150.756V368.747C110.5 375.739 108.245 382.545 104.07 388.154L86.5166 411.735L80.5 419.817L74.4834 411.735L56.9297 388.154C52.7547 382.545 50.5 375.739 50.5 368.747V150.756H110.5Z" fill="url(#swordGrad)" stroke="#0A1220" stroke-width="10"/>
     <path d="M0 133H161V145.5V158H0V145.5V133Z" fill="#FFFFFF"/>
     <rect x="75" y="154" width="8" height="141" fill="#FFFFFF"/>
   </g>
+  <rect x="80" y="86" width="151" height="40" rx="20" fill="#F97316"/>
+  <text x="155.5" y="112" text-anchor="middle" font-family="Inter, Helvetica, Arial, sans-serif" font-size="18" font-weight="700" letter-spacing="2" fill="#0A1220">CULTURE</text>
   
-  <text x="80" y="118" font-family="Inter, Helvetica, Arial, sans-serif" font-size="20" font-weight="700" letter-spacing="4" fill="#F5782B">ONE HEARTBEAT WARRIORS</text>
-  <rect x="80" y="135" width="48" height="3" fill="#F5782B"/>
+  <text x="78" y="220" font-family="Barlow Condensed, Impact, Arial, sans-serif" font-size="118" font-weight="900" letter-spacing="-1" fill="#FFFFFF">EVERY TEAM</text>
+  <text x="78" y="332" font-family="Barlow Condensed, Impact, Arial, sans-serif" font-size="118" font-weight="900" letter-spacing="-1" fill="#FFFFFF">NEEDS A</text>
+  <text x="78" y="444" font-family="Barlow Condensed, Impact, Arial, sans-serif" font-size="118" font-weight="900" letter-spacing="-1" fill="#FFFFFF">THUMB.</text>
   
-  <text x="78" y="268" font-family="Barlow Condensed, Impact, Arial, sans-serif" font-size="148" font-weight="900" letter-spacing="-1" fill="#FFFFFF">INWARD</text>
-  <text x="78" y="400" font-family="Barlow Condensed, Impact, Arial, sans-serif" font-size="148" font-weight="900" letter-spacing="-1" fill="#FFFFFF">DRIFT.</text>
-  
-  <text x="82" y="470" font-family="Inter, Helvetica, Arial, sans-serif" font-size="26" font-weight="500" fill="#FFFFFF" fill-opacity="0.75">The quiet way talented teams fall apart —</text>
-  <text x="82" y="503" font-family="Inter, Helvetica, Arial, sans-serif" font-size="26" font-weight="500" fill="#FFFFFF" fill-opacity="0.75">one player at a time.</text>
+  <text x="82" y="516" font-family="Inter, Helvetica, Arial, sans-serif" font-size="26" font-weight="500" fill="#FFFFFF" fill-opacity="0.75">Which finger are you?</text>
   
   <rect x="80" y="555" width="520" height="1" fill="#FFFFFF" fill-opacity="0.2"/>
   <text x="80" y="590" font-family="Inter, Helvetica, Arial, sans-serif" font-size="18" font-weight="700" letter-spacing="3" fill="#FFFFFF" fill-opacity="0.5">COACH TOMMY BROWN</text>

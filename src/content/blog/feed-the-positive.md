@@ -7,6 +7,7 @@ category: "Culture"
 tags: ["positivity", "culture", "mindset"]
 readTime: "5 min read"
 featured: false
+image: "/og-feed-the-positive.png"
 ---
 
 > "Positive thinking will let you do everything better than negative thinking will." – Zig Ziglar

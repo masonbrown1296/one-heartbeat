@@ -7,6 +7,7 @@ category: "Culture"
 tags: ["team culture", "leadership", "warrior culture"]
 readTime: "4 min read"
 featured: false
+image: "/og-essential-role-of-warriors.png"
 ---
 
 Most teams have someone on their team like the various fingers on a hand.

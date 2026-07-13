@@ -6,7 +6,8 @@ author: "Tommy Brown"
 category: "Mental Toughness"
 tags: ["mental toughness", "habits", "mindset"]
 readTime: "7 min read"
-featured: true
+featured: false
+image: "/og-warrior-or-complainaholic-part-2.png"
 ---
 
 ## 3 Ways to Stop Being a Complainaholic

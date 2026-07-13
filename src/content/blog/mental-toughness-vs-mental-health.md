@@ -7,6 +7,7 @@ category: "Mental Toughness"
 tags: ["mental health", "mental toughness", "leadership"]
 readTime: "8 min read"
 featured: false
+image: "/og-mental-toughness-vs-mental-health.png"
 ---
 
 ## The Strength to Push Through — And the Wisdom to Seek Help

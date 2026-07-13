@@ -6,7 +6,7 @@ author: "Tommy Brown"
 category: "Culture"
 tags: ["team culture", "leadership", "warrior culture"]
 readTime: "6 min read"
-featured: false
+featured: true
 image: "/og-inward-drift.png"
 ---
 

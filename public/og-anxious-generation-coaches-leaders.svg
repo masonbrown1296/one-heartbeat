@@ -1,0 +1,25 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  
+  <defs>
+    <radialGradient id="bgGlow" cx="70%" cy="50%" r="75%">
+      <stop offset="0%" stop-color="#1a2a52" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#0a1220" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="swordGrad" x1="80.5" y1="407.256" x2="80.5" y2="158.256" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F5782B"/><stop offset="1" stop-color="#FF4700"/>
+    </linearGradient>
+    <linearGradient id="numGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#FB923C"/><stop offset="1" stop-color="#F5782B"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="#0A1220"/>
+  <rect width="1200" height="630" fill="url(#bgGlow)"/>
+  <text x="78" y="250" font-family="Georgia, 'Times New Roman', serif" font-size="220" font-weight="700" fill="#F97316">&#8220;</text>
+  
+  <text x="78" y="380" font-family="Barlow Condensed, Impact, Arial, sans-serif" font-size="118" font-weight="900" letter-spacing="-1" fill="#FFFFFF">GRIT ISN’T</text>
+  <text x="78" y="492" font-family="Barlow Condensed, Impact, Arial, sans-serif" font-size="118" font-weight="900" letter-spacing="-1" fill="#FFFFFF">ENOUGH.</text>
+  
+  <rect x="80" y="555" width="520" height="1" fill="#FFFFFF" fill-opacity="0.2"/>
+  <text x="80" y="590" font-family="Inter, Helvetica, Arial, sans-serif" font-size="18" font-weight="700" letter-spacing="3" fill="#FFFFFF" fill-opacity="0.5">COACH TOMMY BROWN</text>
+  <text x="1120" y="590" text-anchor="end" font-family="Inter, Helvetica, Arial, sans-serif" font-size="18" font-weight="500" letter-spacing="1" fill="#FFFFFF" fill-opacity="0.35">oneheartbeatwarriors.com</text>
+</svg>

@@ -41,8 +41,14 @@ export default function Blog() {
           {/* FEATURED */}
           {activeCategory === 'All' && featured && (
             <Link to={`/blog/${featured.slug}`} className="blog-featured fade-in visible" style={{ textDecoration: 'none' }}>
-              <div className="blog-featured-thumb" style={{ background: 'linear-gradient(135deg, var(--navy-900) 0%, var(--navy-800) 100%)' }}>
-                <span style={{ color: '#fff', fontWeight: 700, fontSize: '1.1rem' }}>Featured</span>
+              <div className="blog-featured-thumb">
+                {featured.image ? (
+                  <img src={featured.image} alt={featured.title} className="blog-thumb-img" loading="lazy" />
+                ) : (
+                  <div className="blog-thumb-placeholder">
+                    <span>Featured</span>
+                  </div>
+                )}
               </div>
               <div className="blog-featured-content">
                 <span className="blog-category">{featured.category}</span>
@@ -75,8 +81,14 @@ export default function Blog() {
           <div className="blog-grid mt-4" ref={gridRef}>
             {(activeCategory === 'All' ? regular : filtered).map((post, i) => (
               <Link to={`/blog/${post.slug}`} key={post.slug} className={`blog-card fade-up stagger-${(i % 3) + 1}`} style={{ textDecoration: 'none' }}>
-                <div className="blog-thumb" style={{ background: 'linear-gradient(135deg, var(--navy-800) 0%, var(--gray-700) 100%)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                  <span style={{ color: 'rgba(255,255,255,0.6)', fontWeight: 600, fontSize: '0.85rem' }}>{post.category}</span>
+                <div className="blog-thumb">
+                  {post.image ? (
+                    <img src={post.image} alt={post.title} className="blog-thumb-img" loading="lazy" />
+                  ) : (
+                    <div className="blog-thumb-placeholder">
+                      <span>{post.category}</span>
+                    </div>
+                  )}
                 </div>
                 <div className="blog-card-body">
                   <div className="blog-category">{post.category}</div>

@@ -7,6 +7,7 @@ category: "Leadership"
 tags: ["leadership", "mental health", "coaching"]
 readTime: "9 min read"
 featured: false
+image: "/og-anxious-generation-coaches-leaders.png"
 ---
 
 We are raising kids—and coaching athletes—in a world that looks nothing like the one we grew up in. And we're just now beginning to understand what it's costing them.

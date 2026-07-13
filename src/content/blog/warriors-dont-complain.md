@@ -7,6 +7,7 @@ category: "Culture"
 tags: ["warrior culture", "mental toughness", "team culture"]
 readTime: "6 min read"
 featured: false
+image: "/og-warriors-dont-complain.png"
 ---
 
 > "Warriors do not complain; they adapt themselves to the sum of circumstances which they are placed." – Bruce Lee

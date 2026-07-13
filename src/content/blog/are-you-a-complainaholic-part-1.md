@@ -7,6 +7,7 @@ category: "Mental Toughness"
 tags: ["mental toughness", "habits", "warrior culture"]
 readTime: "6 min read"
 featured: false
+image: "/og-are-you-a-complainaholic-part-1.png"
 ---
 
 ## What's a Complainaholic?
