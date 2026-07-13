@@ -7,7 +7,10 @@ const DEFAULT_IMAGE = `${SITE_URL}/og-image.png`
 export default function SEO({ title, description, path = '', image }) {
   const fullTitle = title ? `${title} | ${SITE_NAME}` : `${SITE_NAME} | Mental Performance & Leadership Training`
   const url = `${SITE_URL}${path}`
-  const img = image || DEFAULT_IMAGE
+  // Resolve relative image paths (e.g. "/og-inward-drift.png") to absolute URLs for crawlers
+  const img = image
+    ? (image.startsWith('http') ? image : `${SITE_URL}${image}`)
+    : DEFAULT_IMAGE
 
   return (
     <Helmet>

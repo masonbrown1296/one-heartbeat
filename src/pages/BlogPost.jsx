@@ -4,6 +4,7 @@ import remarkGfm from 'remark-gfm'
 import { ArrowLeft, Clock, Calendar, User } from 'lucide-react'
 import { getPostBySlug, getAllPosts } from '../content/blogData'
 import SEO from '../components/shared/SEO'
+import CTABanner from '../components/CTABanner'
 import './InnerPage.css'
 import './BlogPost.css'
 
@@ -38,6 +39,7 @@ export default function BlogPost() {
         title={post.title}
         description={post.description}
         path={`/blog/${slug}`}
+        image={post.image}
       />
       <section className="blogpost-hero section-dark">
         <div className="container">
@@ -87,6 +89,14 @@ export default function BlogPost() {
           )}
         </div>
       </section>
+
+      <CTABanner
+        label="Work With Tommy"
+        title="Build a Team That's Hard to Fracture"
+        subtitle="If you want Coach Tommy Brown to work with your team on mental toughness, culture, and catching drift before it costs you, start with a quick conversation."
+        primaryCta="Book a Session"
+        primaryCtaLink="/contact"
+      />
     </div>
   )
 }
